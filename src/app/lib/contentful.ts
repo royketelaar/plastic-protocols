@@ -1,9 +1,8 @@
-// contentful.ts
 import * as contentful from "contentful";
 
 const client = contentful.createClient({
   ***REMOVED***
-  ***REMOVED*** // defaults to 'master' if not set
+  ***REMOVED***
   ***REMOVED***
 });
 

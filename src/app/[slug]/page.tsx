@@ -1,25 +1,32 @@
-"use client";
+// app/[slug]/page.tsx
 
-import { usePathname } from "next/navigation";
-import { fetchEntryBySlug } from "../lib/contentful";
-import { useEffect, useState } from "react";
+import { fetchEntryBySlug, fetchEntries } from '../lib/contentful';
+import { notFound } from 'next/navigation';
 
-export default function Page() {
-  const slug = usePathname().substring(1);
-  const [entry, setEntry] = useState<any | null>(null);
+// interface PageProps {
+//   params: {
+//     slug: string;
+//   };
+// }
 
-  useEffect(() => {
-    fetchEntryBySlug(slug).then((entry) => {
-      setEntry(entry);
-    });
-  }, [slug]);
+export async function generateStaticParams() {
+  const entries = await fetchEntries(); // Fetch all entries from your CMS
+  return entries.map((entry: any) => ({
+    slug: entry.fields.slug,
+  }));
+}
+
+export default async function Page({ params }: any) {
+  const entry = await fetchEntryBySlug(params.slug);
+
+  if (!entry) {
+    notFound();
+  }
 
   return (
     <div>
-      <h1>{entry?.title}</h1>
-      <p>
-        {JSON.stringify(entry?.body)}
-      </p>
+      <h1>{entry.title?.toString()}</h1>
+      {/* <p>{entry.body?.toString()}</p> */}
     </div>
   );
 }
