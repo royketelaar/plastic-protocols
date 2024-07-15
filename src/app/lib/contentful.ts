@@ -6,17 +6,6 @@ const client = contentful.createClient({
   ***REMOVED***
 });
 
-// Fetches all entries
-export const fetchEntries = async () => {
-  try {
-    const entries = await client.getEntries();
-    return entries.items;
-  } catch (error) {
-    console.error(error);
-    return [];
-  }
-};
-
 // Fetches a single entry by its slug
 export const fetchEntryBySlug = async (slug: string) => {
   try {
