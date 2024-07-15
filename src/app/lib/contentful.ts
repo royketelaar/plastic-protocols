@@ -6,6 +6,7 @@ const client = contentful.createClient({
   ***REMOVED***
 });
 
+// Fetches all entries
 export const fetchEntries = async () => {
   try {
     const entries = await client.getEntries();
@@ -16,19 +17,32 @@ export const fetchEntries = async () => {
   }
 };
 
+// Fetches a single entry by its slug
 export const fetchEntryBySlug = async (slug: string) => {
   try {
-    console.log('slug', slug);
+    console.log("slug", slug);
     const entry = await client.getEntries({
       content_type: "page",
       "fields.slug": slug,
     });
 
-    console.log("entries from fetchEntryBySlug", entry?.items[0]?.fields);
-
     return entry?.items[0]?.fields; // Assuming slug is unique and returns only one entry
   } catch (error) {
     console.error(error);
     return null;
+  }
+};
+
+// Fetches all navigation entries
+export const fetchNavigationEntries = async () => {
+  try {
+    const entries = await client.getEntries({
+      content_type: "page",
+      select: ["fields.title"],
+    });
+    return entries.items.map((item: any) => item.fields.title.toLowerCase());
+  } catch (error) {
+    console.error(error);
+    return [];
   }
 };

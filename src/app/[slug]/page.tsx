@@ -9,12 +9,12 @@ import { notFound } from 'next/navigation';
 //   };
 // }
 
-export async function generateStaticParams() {
-  const entries = await fetchEntries(); // Fetch all entries from your CMS
-  return entries.map((entry: any) => ({
-    slug: entry.fields.slug,
-  }));
-}
+// export async function generateStaticParams() {
+//   const entries = await fetchEntries(); // Fetch all entries from your CMS
+//   return entries.map((entry: any) => ({
+//     slug: entry.fields.slug,
+//   }));
+// }
 
 export default async function Page({ params }: any) {
   const entry = await fetchEntryBySlug(params.slug);
