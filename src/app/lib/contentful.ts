@@ -6,7 +6,6 @@ const client = contentful.createClient({
   ***REMOVED***
 });
 
-// Fetches a single entry by its slug
 export const fetchEntryBySlug = async (slug: string) => {
   try {
     console.log("slug", slug);
@@ -15,7 +14,7 @@ export const fetchEntryBySlug = async (slug: string) => {
       "fields.slug": slug,
     });
 
-    return entry?.items[0]?.fields; // Assuming slug is unique and returns only one entry
+    return entry?.items[0]?.fields;
   } catch (error) {
     console.error(error);
     return null;
