@@ -34,7 +34,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const { title, body } = entry as { title: string; body: Document };
 
   return (
-    <div>
+    <div className="mx-auto max-w-4xl p-6 xl:p-0">
       <h1>{title}</h1>
       <div>{documentToReactComponents(body, renderOptions)}</div>
     </div>
