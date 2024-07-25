@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+import Image from "next/image";
+import HamburgerMenu from "./HamburgerMenu";
 
 interface NavigationProps {
   pages: { title: string; slug: string }[];
@@ -6,19 +8,18 @@ interface NavigationProps {
 
 const Navigation = ({ pages }: NavigationProps) => {
   return (
-    <nav className="h-24">
-      <ul className="flex items-center justify-center space-x-4">
-        {pages.map(({ title, slug }) => (
-          <li key={title}>
-            <Link
-              href={`/${slug}`}
-              className="text-white hover:text-gray-300 font-bold"
-            >
-              {title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <nav className="flex items-center h-24 justify-between">
+      {/* Logo  */}
+      <div className="ml-4">
+        <Image
+          src="/logo.svg"
+          alt="Plastic Protocols Logo"
+          width={150}
+          height={0}
+        />
+      </div>
+      {/* Mobile menu */}
+      <HamburgerMenu pages={pages} />
     </nav>
   );
 };
