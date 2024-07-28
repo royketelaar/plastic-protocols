@@ -14,13 +14,16 @@ const HamburgerMenu = ({ pages }: NavigationProps) => {
 
   return (
     <div>
-      <button onClick={toggleMenu} className="p-4">
-        {/* Hamburger Icon */}
-        <div className="space-y-2">
-          <span className="block w-8 h-0.5 bg-black"></span>
-          <span className="block w-8 h-0.5 bg-black"></span>
-          <span className="block w-8 h-0.5 bg-black"></span>
-        </div>
+      <button
+        onClick={toggleMenu}
+        className={`hamburger hamburger--squeeze ${
+          isOpen ? "is-active" : ""
+        } p-4`}
+        type="button"
+      >
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
+        </span>
       </button>
       {isOpen && <MenuContent pages={pages} onClose={toggleMenu} />}
     </div>
