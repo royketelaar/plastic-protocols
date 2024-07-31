@@ -1,0 +1,29 @@
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after,
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after,
+.hamburger-inner:focus,
+.hamburger-inner:focus::before,
+.hamburger-inner:focus::after,
+.hamburger.is-active .hamburger-inner:focus,
+.hamburger.is-active .hamburger-inner:focus::before,
+.hamburger.is-active .hamburger-inner:focus::after,
+.hamburger-inner.active,
+.hamburger-inner.active::before,
+.hamburger-inner.active::after {
+  background-color: #f5ffff;
+  width: 32px;
+}
+
+.hamburger-box {
+  width: 32px;
+}
+
+.hamburger.is-active:hover,
+.hamburger:hover {
+  opacity: 1;
+}
+
+@import "hamburgers/dist/hamburgers.min.css";

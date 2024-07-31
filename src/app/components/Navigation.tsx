@@ -10,7 +10,7 @@ const Navigation = ({ pages }: NavigationProps) => {
   return (
     <nav className="flex items-center h-24 justify-between">
       {/* Logo  */}
-      <div className="ml-4">
+      <div className="ml-4 z-20">
         <Image
           src="/logo.svg"
           alt="Plastic Protocols Logo"

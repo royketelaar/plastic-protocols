@@ -2,7 +2,7 @@
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./styles/globals.scss";
 import Navigation from "./components/Navigation";
 import { fetchNavigationEntries } from "./lib/contentful";
 
