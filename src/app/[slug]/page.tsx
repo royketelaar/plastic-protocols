@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Document, BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { ReactNode } from "react";
+import Image from "next/image";
 
 const renderOptions = {
   renderNode: {
@@ -15,10 +16,19 @@ const renderOptions = {
     },
     [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
       const { file, title } = node.data.target.fields;
-      const { url, contentType } = file;
+      const { url, contentType, details } = file;
+      const { width } = details.image;
 
       if (contentType.startsWith("image/")) {
-        return <img src={url} alt={title} />;
+        return (
+          <Image
+            src={"https:" + url}
+            alt={title}
+            layout="responsive"
+            width={width}
+            height="0"
+          />
+        );
       }
 
       // Handle other content types if needed
