@@ -4,7 +4,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Document, BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { ReactNode } from "react";
 import Image from "next/image";
-
+import ContentBody from "../components/ContentBody";
 
 const renderOptions = {
   renderNode: {
@@ -45,9 +45,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const { title, body } = entry as { title: string; body: Document };
 
   return (
-    <div className="mx-auto max-w-4xl p-6 xl:p-0 text-cyan-50">
+    <ContentBody>
       <h1>{title}</h1>
       {documentToReactComponents(body, renderOptions)}
-    </div>
+    </ContentBody>
   );
 }
