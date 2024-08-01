@@ -1,0 +1,32 @@
+// Heading styling
+h1 {
+  @apply text-4xl font-bold mb-4;
+}
+
+h2 {
+  @apply text-3xl font-bold mb-3;
+}
+
+h3 {
+  @apply text-2xl font-bold mb-2;
+}
+
+// Table styling
+table {
+  @apply table-auto border-collapse;
+}
+
+table th,
+table td {
+  @apply border p-2;
+}
+
+table th {
+  @apply bg-cyan-700 text-white;
+}
+
+table td {
+  @apply bg-cyan-800 text-white;
+}
+
+
