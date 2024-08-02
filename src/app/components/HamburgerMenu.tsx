@@ -13,7 +13,7 @@ const HamburgerMenu = ({ pages }: NavigationProps) => {
   };
 
   return (
-    <div>
+    <div className="lg:hidden">
       <button
         onClick={toggleMenu}
         className={`hamburger hamburger--squeeze ${
