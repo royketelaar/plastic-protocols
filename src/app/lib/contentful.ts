@@ -29,13 +29,21 @@ export const fetchNavigationEntries = async () => {
   try {
     const entries = await client.getEntries({
       content_type: "page",
-      select: ["fields.title", "fields.slug"],
-    })
+      select: [
+        "fields.title",
+        "fields.slug",
+        "fields.inNavigation",
+        "fields.childPage",
+      ],
+    });
 
-    return entries.items.map((item: any) => ({
-      title: item.fields.title.toLowerCase(),
-      slug: item.fields.slug,
-    }));
+    return entries.items
+      .filter((item: any) => item.fields.inNavigation)
+      .map((item: any) => ({
+        title: item.fields.title.toLowerCase(),
+        slug: item.fields.slug,
+        childPage: item.fields?.childPage?.[0]?.fields,
+      }));
   } catch (error) {
     console.error(error);
     return [];
