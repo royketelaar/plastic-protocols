@@ -18,7 +18,7 @@ const HamburgerMenu = ({ pages }: NavigationProps) => {
         onClick={toggleMenu}
         className={`hamburger hamburger--squeeze ${
           isOpen ? "is-active" : ""
-        } p-4 z-20 fixed top-0 right-0 h-24`}
+        } lg:hidden z-20 h-24`}
         type="button"
       >
         <span className="hamburger-box">

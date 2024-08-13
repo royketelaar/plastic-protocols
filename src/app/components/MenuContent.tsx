@@ -11,7 +11,7 @@ interface NavigationProps {
 
 const MenuContent = ({ pages, onClose }: NavigationProps) => {
   return (
-    <div className="fixed inset-0 bg-cyan-950 flex justify-center items-center z-10">
+    <div className="fixed inset-0 bg-cyan-950 flex justify-center items-center z-10 top-24">
       <nav>
         <ul className="flex">
           {pages.map(({ title, slug, childPage }) => (
