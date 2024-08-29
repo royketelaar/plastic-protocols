@@ -28,7 +28,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className="bg-cyan-950">
+      <body className="bg-sky-950">
         <Navigation pages={menuItems} />
         <main className={inter.className}>{children}</main>
       </body>

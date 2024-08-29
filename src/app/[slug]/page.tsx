@@ -8,6 +8,7 @@ import ContentBody from "../components/ContentBody";
 
 const renderOptions = {
   renderNode: {
+    // Handle embedded hyperlinks
     [INLINES.HYPERLINK]: (node: any, children: ReactNode) => {
       return (
         <a href={node.data.uri} target="_blank" rel="noopener noreferrer">
@@ -15,6 +16,7 @@ const renderOptions = {
         </a>
       );
     },
+    // Handle embedded assets
     [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
       const { file, title } = node.data.target.fields;
       const { url, contentType, details } = file;
@@ -35,6 +37,38 @@ const renderOptions = {
       // Handle other content types if needed
       return <div>Unsupported asset type: {contentType}</div>;
     },
+    // Handle embedded entries
+    [BLOCKS.EMBEDDED_ENTRY]: (node: any) => {
+      const entry = node.data.target;
+
+      if (entry.sys.contentType.sys.id === "youtubeVideo") {
+        const { youtubeUrl } = entry.fields;
+        return (
+          <div className="video-embed my-12">
+            <div style={{ position: "relative", paddingTop: "56.25%" }}>
+              <iframe
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                }}
+                src={`https://www.youtube.com/embed/${
+                  youtubeUrl.split("v=")[1]
+                }`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        );
+      }
+      // Add more conditions if you have other types of embeddable entries
+      return null;
+    },
   },
 };
 
@@ -45,9 +79,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const { title, body } = entry as { title: string; body: Document };
 
   return (
-    <ContentBody>
-      <h1>{title}</h1>
-      {documentToReactComponents(body, renderOptions)}
-    </ContentBody>
+    <ContentBody>{documentToReactComponents(body, renderOptions)}</ContentBody>
   );
 }
