@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MenuContent from "./MenuContent";
 
 interface NavigationProps {
@@ -7,10 +7,17 @@ interface NavigationProps {
 
 const HamburgerMenu = ({ pages }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpen]);
 
   return (
     <div className="lg:hidden">

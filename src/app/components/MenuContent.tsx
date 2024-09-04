@@ -4,31 +4,48 @@ interface NavigationProps {
   pages: {
     title: string;
     slug: string;
-    childPage?: { title: string; slug: string };
+    childPages?: any;
   }[];
   onClose: () => void;
 }
 
 const MenuContent = ({ pages, onClose }: NavigationProps) => {
+  const currentUrl =
+    typeof window !== "undefined" ? window.location.pathname : "";
+
   return (
-    <div className="fixed inset-0 bg-sky-950 flex justify-center items-center z-10 top-24">
+    <div className="fixed inset-0 bg-sky-950 z-10 top-24 px-6">
       <nav>
-        <ul className="flex">
-          {pages.map(({ title, slug, childPage }) => (
-            <div key={title}>
-              <li className="ml-4">
-                <Link
-                  href={`/${slug}`}
-                  className="text-blue-500 hover:text-blue-800"
-                  onClick={onClose}
-                >
-                  {title}
-                </Link>
-              </li>
-              <Link onClick={onClose} href={`/${childPage?.slug}`}>
-                {childPage?.title}
+        <ul>
+          {pages.map(({ title, slug, childPages }) => (
+            <li key={title}>
+              <Link
+                href={`/${slug}`}
+                className="text-white underlined-header text-2xl font-bold mb-2"
+                onClick={onClose}
+              >
+                {title.toUpperCase()}
               </Link>
-            </div>
+              {childPages && (
+                <ul className="mb-8">
+                  {childPages.map((childPage: any) => (
+                    <li key={childPage?.fields?.slug}>
+                      <Link
+                        href={`/${childPage?.fields?.slug}`}
+                        className={`block text-white mb-2 ${
+                          currentUrl.includes(childPage?.fields?.slug)
+                            ? "underline"
+                            : ""
+                        }`}
+                        onClick={onClose}
+                      >
+                        {childPage?.fields?.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
           ))}
         </ul>
       </nav>

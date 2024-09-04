@@ -2,20 +2,7 @@ main {
   // Heading styling
   h1 {
     @apply text-5xl font-bold mb-4;
-    position: relative;
-    display: inline-block;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 6px;
-      width: 105%;
-      height: 16px;
-      @apply bg-teal-600;
-      transform: translateY(50%); 
-      z-index: -1;
-    }
+    @include underlined-header;
   }
 
   h2 {

@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import custom mixins */
+@import "./mixins.scss";
+
 /* Import custom hamburgers CSS */
 @import "./hamburgers-custom.scss";
+
+/* Import custom contentful rich text CSS */
 @import "./contentful-rich-text.scss";
+
+/* Define reusable class */
+.underlined-header {
+  @include underlined-header;
+}

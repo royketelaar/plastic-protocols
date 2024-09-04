@@ -1,0 +1,16 @@
+@mixin underlined-header {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    width: 105%;
+    height: 33%;
+    @apply bg-teal-600;
+    transform: translateY(50%);
+    z-index: -1;
+  }
+}

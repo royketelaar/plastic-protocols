@@ -33,16 +33,19 @@ export const fetchNavigationEntries = async () => {
         "fields.title",
         "fields.slug",
         "fields.inNavigation",
-        "fields.childPage",
+        "fields.childPages",
       ],
     });
+
+    // log child page
+    console.log(entries.items[0].fields.childPages);
 
     return entries.items
       .filter((item: any) => item.fields.inNavigation)
       .map((item: any) => ({
         title: item.fields.title.toLowerCase(),
         slug: item.fields.slug,
-        childPage: item.fields?.childPage?.[0]?.fields,
+        childPages: item.fields?.childPages,
       }));
   } catch (error) {
     console.error(error);
