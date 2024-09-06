@@ -37,9 +37,6 @@ export const fetchNavigationEntries = async () => {
       ],
     });
 
-    // log child page
-    console.log(entries.items[0].fields.childPages);
-
     return entries.items
       .filter((item: any) => item.fields.inNavigation)
       .map((item: any) => ({
