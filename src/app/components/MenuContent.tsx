@@ -49,6 +49,11 @@ const MenuContent = ({ pages, onClose }: NavigationProps) => {
           ))}
         </ul>
       </nav>
+      <div className="mt-8">
+        <Link href="https://x.com/plasticprotocol" className="text-sky-500">
+          Follow <span className="underline">PlasticProtocols</span> on X
+        </Link>
+      </div>
     </div>
   );
 };

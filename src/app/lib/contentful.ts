@@ -10,6 +10,7 @@ const client = contentful.createClient({
   accessToken: accessToken,
 });
 
+// Fetch certain entry by slug
 export const fetchEntryBySlug = async (slug: string) => {
   try {
     const entry = await client.getEntries({
@@ -47,5 +48,41 @@ export const fetchNavigationEntries = async () => {
   } catch (error) {
     console.error(error);
     return [];
+  }
+};
+
+// Fetch site metadata
+export const fetchSiteMetadata = async () => {
+  try {
+    const entries = await client.getEntries({
+      content_type: "siteSettings",
+      limit: 1,
+    });
+
+    const entry = entries.items[0];
+    const metaTitle = entry.fields.metaTitle;
+    const metaDescription = entry.fields.metaDescription;
+
+    return { metaTitle, metaDescription };
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+};
+
+// Fetch site homepage content
+export const fetchHomepageContent = async () => {
+  try {
+    const entries = await client.getEntries({
+      content_type: "siteSettings",
+      limit: 1,
+    });
+
+    const homepageContent = entries.items[0].fields.homepageContent;
+
+    return homepageContent
+  } catch (error) {
+    console.error(error);
+    return null;
   }
 };

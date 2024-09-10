@@ -2,7 +2,6 @@ main {
   // Heading styling
   h1 {
     @apply text-5xl font-bold mb-4;
-    @include underlined-header;
   }
 
   h2 {
