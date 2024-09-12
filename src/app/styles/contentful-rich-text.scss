@@ -53,6 +53,9 @@ main {
 
   // Blockquote styling
   blockquote {
-    @apply my-12 italic text-4xl text-center sm:text-left font-thin;
+    @apply my-16 italic text-4xl sm:text-left font-thin;
+    p {
+      @apply text-center;
+    }
   }
 }

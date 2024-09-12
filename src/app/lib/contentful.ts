@@ -80,9 +80,29 @@ export const fetchHomepageContent = async () => {
 
     const homepageContent = entries.items[0].fields.homepageContent;
 
-    return homepageContent
+    return homepageContent;
   } catch (error) {
     console.error(error);
     return null;
+  }
+};
+
+// Fetch all pages that have child pages
+export const fetchPagesWithChildPages = async () => {
+  try {
+    const entries = await client.getEntries({
+      content_type: "page",
+      "fields.childPages[exists]": true,
+    });
+
+    return entries.items.map((item: any) => ({
+      title: item.fields.title,
+      slug: item.fields.slug,
+      childPages: item.fields.childPages,
+      order: item.fields.orderNumber,
+    }));
+  } catch (error) {
+    console.error(error);
+    return [];
   }
 };

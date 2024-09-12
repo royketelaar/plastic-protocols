@@ -6,7 +6,6 @@ import ContentBody from "../components/ContentBody";
 import Link from "next/link";
 import { renderOptions } from "../lib/renderOptions";
 
-
 export default async function Page({ params }: { params: { slug: string } }) {
   const entry = await fetchEntryBySlug(params.slug);
   if (!entry) notFound();
@@ -22,14 +21,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <h1 className="text-4xl font-bold text-sky-50 mb-8">{title}</h1>
       {documentToReactComponents(body, renderOptions)}
       {childPages && (
-        <Link
-          href={`
-          /${childPages[0]?.fields?.slug}
-        `}
-          className="no-underline"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
-            {childPages.map((childPage: any) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
+          {childPages.map((childPage: any) => (
+            <Link
+              href={`/${childPage?.fields?.slug}`}
+              key={childPage?.fields?.slug}
+              className="no-underline"
+            >
               <div
                 key={childPage?.fields?.slug}
                 className="p-8 rounded-lg shadow-lg bg-sky-900 text-sky-100"
@@ -39,9 +37,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 </h2>
                 <p className="text-white">{childPage?.fields?.description}</p>
               </div>
-            ))}
-          </div>
-        </Link>
+            </Link>
+          ))}
+        </div>
       )}
     </ContentBody>
   );
