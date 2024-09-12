@@ -14,7 +14,7 @@ const MenuContent = ({ pages, onClose }: NavigationProps) => {
     typeof window !== "undefined" ? window.location.pathname : "";
 
   return (
-    <div className="fixed inset-0 bg-sky-950 z-10 top-24 px-6">
+    <div>
       <nav>
         <ul>
           {pages.map(({ title, slug, childPages }) => (
@@ -33,7 +33,7 @@ const MenuContent = ({ pages, onClose }: NavigationProps) => {
                       <Link
                         href={`/${childPage?.fields?.slug}`}
                         className={`block text-white mb-2 ${
-                          currentUrl.includes(childPage?.fields?.slug)
+                          currentUrl?.includes(childPage?.fields?.slug)
                             ? "underline"
                             : ""
                         }`}

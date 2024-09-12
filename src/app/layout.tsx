@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./styles/globals.scss";
 import Navigation from "./components/Navigation";
 import { fetchNavigationEntries } from "./lib/contentful";
+import { GlobalProvider } from "./lib/GlobalContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,8 +28,10 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className="bg-sky-950">
-        <Navigation pages={menuItems} />
-        <main className={inter.className}>{children}</main>
+        <GlobalProvider>
+          <Navigation pages={menuItems} />
+          <main className={inter.className}>{children}</main>
+        </GlobalProvider>
       </body>
     </html>
   );
