@@ -21,7 +21,7 @@ const HamburgerMenu = ({ pages }: NavigationProps) => {
     <div>
       <button
         onClick={toggleMenu}
-        className={`hamburger hamburger--squeeze ${
+        className={`xl:hidden hamburger hamburger--squeeze ${
           isOpen ? "is-active" : ""
         } z-20 h-24`}
         type="button"
@@ -32,7 +32,7 @@ const HamburgerMenu = ({ pages }: NavigationProps) => {
       </button>
 
       {isOpen && (
-        <div className="lg:hidden fixed inset-0 bg-sky-950 z-10 top-24 px-6">
+        <div className="xl:hidden fixed inset-0 bg-sky-950 z-10 top-24 mx-auto max-w-4xl xl:max-w-full px-8 ">
           <MenuContent pages={pages} onClose={toggleMenu} />
         </div>
       )}

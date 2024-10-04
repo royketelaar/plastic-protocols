@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import HamburgerMenu from "./HamburgerMenu";
 import Link from "next/link";
@@ -15,7 +16,7 @@ const Navigation = ({ pages }: NavigationProps) => {
 
   return (
     <>
-      <nav className="flex items-center h-24 justify-between mx-auto max-w-4xl p-6 lg:p-0">
+      <nav className="flex items-center h-24 justify-between mx-auto max-w-4xl xl:max-w-full px-8 ">
         {/* Logo  */}
         <Link className="z-20" href={"/"}>
           <Image
@@ -27,41 +28,10 @@ const Navigation = ({ pages }: NavigationProps) => {
         </Link>
 
         {/* Mobile menu */}
-        <HamburgerMenu pages={pages} />
+        <div className="xl:hidden">
+          <HamburgerMenu pages={pages} />
+        </div>
       </nav>
-      {/* Desktop */}
-      {isOpen && (
-        <aside className="hidden xl:flex fixed left-0 top-0 h-screen w-96 px-8 py-24 border-r-2">
-          {/* Close Button */}
-          <button
-            onClick={toggleMenu}
-            className="absolute top-8 left-6"
-            aria-label="Close Menu"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="size-8 text-white"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18 18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-
-          <MenuContent
-            pages={pages}
-            onClose={function (): void {
-              throw new Error("Function not implemented.");
-            }}
-          />
-        </aside>
-      )}
     </>
   );
 };

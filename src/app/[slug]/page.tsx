@@ -21,7 +21,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <h1 className="text-4xl font-bold text-sky-50 mb-8">{title}</h1>
       {documentToReactComponents(body, renderOptions)}
       {childPages && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sky-50">
           {childPages.map((childPage: any) => (
             <Link
               href={`/${childPage?.fields?.slug}`}
@@ -35,7 +35,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 <h2 className="text-2xl font-bold mb-4">
                   {childPage?.fields?.title}
                 </h2>
-                <p className="text-white">{childPage?.fields?.description}</p>
+                <p className="text-sky-50-">{childPage?.fields?.description}</p>
               </div>
             </Link>
           ))}

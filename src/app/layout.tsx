@@ -4,6 +4,8 @@ import "./styles/globals.scss";
 import Navigation from "./components/Navigation";
 import { fetchNavigationEntries } from "./lib/contentful";
 import { GlobalProvider } from "./lib/GlobalContext";
+import SideBar from "./components/SideBar";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +32,12 @@ export default async function RootLayout({
       <body className="bg-sky-950">
         <GlobalProvider>
           <Navigation pages={menuItems} />
-          <main className={inter.className}>{children}</main>
+          <div className="flex w-full">
+            <SideBar pages={menuItems} />
+            <main className="text-sky-50 max-w-4xl mx-auto px-8 xl:max-w-4xl xl:mx-0">
+              {children}
+            </main>
+          </div>
         </GlobalProvider>
       </body>
     </html>

@@ -6,7 +6,7 @@ interface NavigationProps {
     slug: string;
     childPages?: any;
   }[];
-  onClose: () => void;
+  onClose?: () => void;
 }
 
 const MenuContent = ({ pages, onClose }: NavigationProps) => {
@@ -21,7 +21,7 @@ const MenuContent = ({ pages, onClose }: NavigationProps) => {
             <li key={title}>
               <Link
                 href={`/${slug}`}
-                className="text-white underlined-header text-2xl font-bold mb-2"
+                className="text-sky-50 underlined-header text-2xl font-bold mb-2"
                 onClick={onClose}
               >
                 {title.toUpperCase()}
@@ -29,10 +29,14 @@ const MenuContent = ({ pages, onClose }: NavigationProps) => {
               {childPages && (
                 <ul className="mb-8">
                   {childPages.map((childPage: any) => (
-                    <li key={childPage?.fields?.slug}>
+                    <li
+                      key={childPage?.fields?.slug}
+                      className="flex hover:underline"
+                    >
+                      <span className="inline-block min-h-3 min-w-3 max-h-3 max-w-3 bg-teal-400 rounded-full mr-2 mt-2"></span>
                       <Link
                         href={`/${childPage?.fields?.slug}`}
-                        className={`block text-white mb-2 ${
+                        className={`block text-sky-50 mb-2 text-lg ${
                           currentUrl?.includes(childPage?.fields?.slug)
                             ? "underline"
                             : ""
