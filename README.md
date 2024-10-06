@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Plastic Protocols
+
+Plastic Protocols is a Next.js application designed to raise awareness about plastic, particularly micro- and nano-plastics, in daily life. It provides educational content, resources, and tools to help users understand the impact of plastic on the environment and their health.
 
 ## Getting Started
 
@@ -16,9 +18,21 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Homepage**: Displays dynamic content fetched from Contentful, including articles and multimedia.
+- **Content Management**: Utilizes Contentful for managing and rendering rich text content, including embedded hyperlinks, assets, and entries.
+- **Navigation**: Features a dynamic navigation menu and sidebar, populated with entries fetched from Contentful.
+- **Styling**: Uses Tailwind CSS for styling, ensuring a modern and responsive design. Custom styles are defined in SCSS files, including mixins and utility classes.
+- **SEO and Metadata**: Metadata such as the title and description are set dynamically to improve SEO and provide relevant information to users.
+
+## Technical Stack
+
+- **Frontend**: React, Next.js
+- **Styling**: Tailwind CSS, SCSS
+- **Content Management**: Contentful
+- **Build Tools**: PostCSS, ESLint
+- **Deployment**: Vercel
 
 ## Learn More
 
@@ -29,8 +43,11 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+This project is licensed under the MIT License.
+
