@@ -28,9 +28,7 @@ const Navigation = ({ pages }: NavigationProps) => {
         </Link>
 
         {/* Mobile menu */}
-        <div className="xl:hidden">
-          <HamburgerMenu pages={pages} />
-        </div>
+        <HamburgerMenu pages={pages} />
       </nav>
     </>
   );
