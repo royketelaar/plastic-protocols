@@ -16,7 +16,7 @@ const Navigation = ({ pages }: NavigationProps) => {
 
   return (
     <>
-      <nav className="flex items-center h-24 justify-between mx-auto max-w-4xl xl:max-w-full px-8 ">
+      <nav className="flex items-center h-24 justify-between mx-auto max-w-4xl xl:max-w-full px-8">
         {/* Logo  */}
         <Link className="z-20" href={"/"}>
           <Image

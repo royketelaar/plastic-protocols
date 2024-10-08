@@ -34,7 +34,7 @@ export default async function RootLayout({
           <Navigation pages={menuItems} />
           <div className="flex w-full">
             <SideBar pages={menuItems} />
-            <main className="text-sky-50 max-w-4xl mx-auto px-8 xl:max-w-4xl xl:mx-0">
+            <main className="text-sky-50 max-w-4xl mx-auto w-full px-8 xl:max-w-4xl xl:mx-0">
               {children}
             </main>
           </div>
