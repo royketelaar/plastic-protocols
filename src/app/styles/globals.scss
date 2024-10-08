@@ -18,9 +18,11 @@
 
 body {
   background-image: url('/background.jpeg');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: 25%;
   background-blend-mode: overlay;
   background-attachment: fixed;
-  z-index: 1
+  width: 100%;
+  height: 100%;
 }
