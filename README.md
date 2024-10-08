@@ -18,6 +18,18 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Setting Up Environment Variables
+
+Create a `.env.local` file in the root of your project directory and add the necessary environment variables. For example:
+
+```plaintext
+NEXT_PUBLIC_API_URL=https://api.example.com
+CONTENTFUL_SPACE_ID=your_space_id
+CONTENTFUL_ACCESS_TOKEN=your_access_token
+```
+
+Make sure to replace the placeholder values with your actual configuration.
+
 ## Features
 
 - **Homepage**: Displays dynamic content fetched from Contentful, including articles and multimedia.
