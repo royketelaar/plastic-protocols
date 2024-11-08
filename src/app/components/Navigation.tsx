@@ -12,8 +12,6 @@ interface NavigationProps {
 }
 
 const Navigation = ({ pages }: NavigationProps) => {
-  const { isOpen, toggleMenu } = useGlobalContext();
-
   return (
     <>
       <nav className="flex items-center h-24 justify-between mx-auto max-w-4xl xl:max-w-full px-8">

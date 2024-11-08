@@ -43,7 +43,9 @@ export const fetchNavigationEntries = async () => {
       .map((item: any) => ({
         title: item.fields.title.toLowerCase(),
         slug: item.fields.slug,
-        childPages: item.fields?.childPages,
+        childPages: item.fields.childPages?.filter(
+          (child: any) => child.sys.type === "Entry"
+        ),
       }));
   } catch (error) {
     console.error(error);
