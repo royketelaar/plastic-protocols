@@ -98,7 +98,9 @@ export const fetchPagesWithChildPages = async () => {
     return entries.items.map((item: any) => ({
       title: item.fields.title,
       slug: item.fields.slug,
-      childPages: item.fields.childPages,
+      childPages: item.fields.childPages?.filter(
+        (child: any) => child.sys.type === "Entry"
+      ),
       order: item.fields.orderNumber,
     }));
   } catch (error) {
