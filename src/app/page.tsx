@@ -4,7 +4,6 @@ import {
   fetchHomepageContent,
   fetchPagesWithChildPages,
 } from "./lib/contentful";
-import { render } from "sass";
 import { renderOptions } from "./lib/renderOptions";
 import Link from "next/link";
 

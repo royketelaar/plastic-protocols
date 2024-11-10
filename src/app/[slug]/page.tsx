@@ -18,7 +18,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <ContentBody>
-      <h1 className="text-4xl font-bold text-sky-50 mb-8">{title}</h1>
+      <h1 className="text-6xl font-bold text-sky-50 mb-8">{title}</h1>
       {documentToReactComponents(body, renderOptions)}
       {childPages && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sky-50">
