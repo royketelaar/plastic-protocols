@@ -31,7 +31,7 @@ export default async function RootLayout({
         <GlobalProvider>
           <Navigation pages={menuItems} />
           <GoogleAnalytics gaId="G-DVP21LB9PQ" />
-          <CookieConsentWrapper />
+          {/* <CookieConsentWrapper /> */}
           <div className="flex w-full">
             <SideBar pages={menuItems} />
             <main className="text-sky-50 max-w-4xl mx-auto w-full px-8 xl:max-w-4xl xl:mx-0">
