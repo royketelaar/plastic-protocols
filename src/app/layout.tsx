@@ -5,6 +5,7 @@ import { fetchNavigationEntries } from "./lib/contentful";
 import { GlobalProvider } from "./lib/GlobalContext";
 import SideBar from "./components/SideBar";
 import CookieConsentWrapper from "./components/CookieConsentWrapper";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Plastic Protocols", // TODO: make this dynamic
@@ -29,6 +30,7 @@ export default async function RootLayout({
       <body className="bg-sky-950">
         <GlobalProvider>
           <Navigation pages={menuItems} />
+          <GoogleAnalytics gaId="G-DVP21LB9PQ" />
           <CookieConsentWrapper />
           <div className="flex w-full">
             <SideBar pages={menuItems} />
