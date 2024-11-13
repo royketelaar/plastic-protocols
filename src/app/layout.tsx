@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./styles/globals.scss";
 import Navigation from "./components/Navigation";
 import { fetchNavigationEntries } from "./lib/contentful";
 import { GlobalProvider } from "./lib/GlobalContext";
 import SideBar from "./components/SideBar";
-import Image from "next/image";
-
-const inter = Inter({ subsets: ["latin"] });
+import CookieConsentWrapper from "./components/CookieConsentWrapper";
 
 export const metadata: Metadata = {
   title: "Plastic Protocols", // TODO: make this dynamic
@@ -32,6 +29,7 @@ export default async function RootLayout({
       <body className="bg-sky-950">
         <GlobalProvider>
           <Navigation pages={menuItems} />
+          <CookieConsentWrapper />
           <div className="flex w-full">
             <SideBar pages={menuItems} />
             <main className="text-sky-50 max-w-4xl mx-auto w-full px-8 xl:max-w-4xl xl:mx-0">
