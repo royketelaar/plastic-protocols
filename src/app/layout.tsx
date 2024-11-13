@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation";
 import { fetchNavigationEntries } from "./lib/contentful";
 import { GlobalProvider } from "./lib/GlobalContext";
 import SideBar from "./components/SideBar";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Plastic Protocols", // TODO: make this dynamic
@@ -27,6 +28,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className="bg-sky-950">
         <GlobalProvider>
+          <GoogleAnalytics gaId="G-DVP21LB9PQ" />
           <Navigation pages={menuItems} />
           <div className="flex w-full">
             <SideBar pages={menuItems} />
