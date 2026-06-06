@@ -27,5 +27,8 @@
     "@playwright/test": "^1.49.1",
     "@tailwindcss/vite": "^4.0.0",
     "tailwindcss": "^4.0.0"
-  }
+  },
+  "trustedDependencies": [
+    "better-sqlite3"
+  ]
 }

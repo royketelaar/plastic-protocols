@@ -3,7 +3,9 @@
   publish = ".output/public"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
+  # Let bun run better-sqlite3's native postinstall (Nuxt Content needs it at build).
+  # Also declared in package.json "trustedDependencies".
 
 # Nuxt (Nitro) writes the prerendered static site to dist/ when NITRO_PRESET=static.
 [build.processing]
