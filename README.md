@@ -1,65 +1,54 @@
 # Plastic Protocols
 
-Plastic Protocols is a Next.js application designed to raise awareness about plastic, particularly micro- and nano-plastics, in daily life. It provides educational content, resources, and tools to help users understand the impact of plastic on the environment and their health.
+Evidence-graded awareness site about micro- and nanoplastics: what they are, how
+much we're really exposed to, and the small, proven changes that lower your
+exposure. Calm and non-alarmist, every claim carries an evidence grade and a
+source.
 
-## Getting Started
+Live goal: make the severity clear, then funnel people to the **protocols**.
 
-First, run the development server:
+## Stack
+
+- [Nuxt 4](https://nuxt.com) + [Nuxt Content v3](https://content.nuxt.com) (file-based, evidence-graded articles)
+- [@nuxtjs/i18n](https://i18n.nuxtjs.org) — 7 languages, English default, RTL for Arabic
+- Tailwind CSS v4, `@nuxt/image`, `@nuxt/fonts` (self-hosted), `@nuxt/icon`
+- Package manager: **bun**. Deploy: **Netlify** (static prerender).
+
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+bun run dev        # http://localhost:3000  (use TMPDIR=/tmp/x on macOS if the vite-node socket errors)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build
 
-## Setting Up Environment Variables
-
-Create a `.env.local` file in the root of your project directory and add the necessary environment variables. For example:
-
-```plaintext
-NEXT_PUBLIC_API_URL=https://api.example.com
-CONTENTFUL_SPACE_ID=your_space_id
-CONTENTFUL_ACCESS_TOKEN=your_access_token
+```bash
+bun run generate   # static site → .output/public  (Netlify publish dir)
 ```
 
-Make sure to replace the placeholder values with your actual configuration.
+## Structure
 
-## Features
+```
+app/            # pages, components, composables, layouts, utils, assets
+content/<lang>/  protocols/*.md  myths/*.md   # evidence-graded articles, per locale
+i18n/locales/   # UI strings per language
+content.config.ts  # Nuxt Content collections + frontmatter schema
+docs/           # evidence dossier (single source of truth) + design spec
+```
 
-- **Homepage**: Displays dynamic content fetched from Contentful, including articles and multimedia.
-- **Content Management**: Utilizes Contentful for managing and rendering rich text content, including embedded hyperlinks, assets, and entries.
-- **Navigation**: Features a dynamic navigation menu and sidebar, populated with entries fetched from Contentful.
-- **Styling**: Uses Tailwind CSS for styling, ensuring a modern and responsive design. Custom styles are defined in SCSS files, including mixins and utility classes.
-- **SEO and Metadata**: Metadata such as the title and description are set dynamically to improve SEO and provide relevant information to users.
+## Content model
 
-## Technical Stack
+Each protocol/myth is Markdown with frontmatter (`evidenceGrade`, `evidenceType`,
+`impact`, `effort`, `cost`, `sources[]`, …). All claims trace back to
+[`docs/evidence-dossier.md`](./docs/evidence-dossier.md), which grades every
+statement `strong | emerging | weak | unproven | debunked`.
 
-- **Frontend**: React, Next.js
-- **Styling**: Tailwind CSS, SCSS
-- **Content Management**: Contentful
-- **Build Tools**: PostCSS, ESLint
-- **Deployment**: Vercel
+## Languages
 
-## Learn More
+English (default), Nederlands, العربية (RTL), 中文, Français, हिन्दी, Español.
 
-To learn more about Next.js, take a look at the following resources:
+## Quality
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License.
-
+WCAG 2.2 AA (axe: 0 violations across templates), responsive, per-locale
+`<html lang>` + hreflang. Educational, not medical advice.

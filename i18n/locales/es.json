@@ -1,0 +1,243 @@
+{
+  "site": {
+    "name": "Plastic Protocols",
+    "tagline": "Pasos basados en evidencia para reducir tu exposición a los microplásticos"
+  },
+  "nav": {
+    "home": "Inicio",
+    "science": "La ciencia",
+    "protocols": "Protocolos",
+    "myths": "Mitos",
+    "check": "Autoevaluación",
+    "sources": "Fuentes",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "skip": "Ir al contenido"
+  },
+  "lang": {
+    "switch": "Idioma",
+    "en": "English",
+    "nl": "Nederlands"
+  },
+  "grade": {
+    "strong": "Evidencia sólida",
+    "emerging": "Evidencia emergente",
+    "weak": "Evidencia débil",
+    "unproven": "Sin demostrar",
+    "debunked": "Refutado",
+    "short": {
+      "strong": "Sólida",
+      "emerging": "Emergente",
+      "weak": "Débil",
+      "unproven": "Sin demostrar",
+      "debunked": "Refutado"
+    },
+    "desc": {
+      "strong": "Consenso robusto, basado en múltiples estudios o posición regulatoria.",
+      "emerging": "Señal real, pero controvertida o aún no concluyente.",
+      "weak": "Evidencia limitada o indirecta, o cifras titulares exageradas.",
+      "unproven": "Plausible, pero sin evidencia de respaldo en humanos.",
+      "debunked": "Una afirmación popular que la evidencia contradice."
+    }
+  },
+  "evidenceType": {
+    "particle": "Partículas",
+    "chemical": "Químicos",
+    "both": "Partículas + químicos"
+  },
+  "meta": {
+    "impact": "Impacto",
+    "effort": "Esfuerzo",
+    "cost": "Costo",
+    "high": "Alto",
+    "medium": "Medio",
+    "low": "Bajo",
+    "free": "Gratis",
+    "higher": "Mayor"
+  },
+  "common": {
+    "readMore": "Leer el protocolo",
+    "viewAllProtocols": "Ver todos los protocolos",
+    "sources": "Fuentes",
+    "source": "Fuente",
+    "evidence": "Evidencia",
+    "whatToDo": "Qué hacer",
+    "whyItWorks": "Por qué funciona",
+    "theFullStory": "La historia completa",
+    "theCatch": "La salvedad honesta",
+    "backToProtocols": "Todos los protocolos",
+    "backToMyths": "Todos los mitos",
+    "startCheck": "Hacer la autoevaluación de 2 minutos",
+    "addToPlan": "Añadir a mi plan",
+    "inPlan": "En tu plan",
+    "done": "Listo",
+    "loading": "Cargando…"
+  },
+  "home": {
+    "kicker": "Los microplásticos ya están dentro de nosotros",
+    "heroTitle": "No puedes escapar de los microplásticos. Pero sí puedes absorber mucho menos.",
+    "heroLead": "Están en el océano, el aire, nuestra comida y ahora también en nuestra sangre, placentas y cerebros. Nadie puede deshacer eso. Lo que aún puedes cambiar es cuánto más entra en tu cuerpo, y unos pocos cambios probados hacen exactamente eso.",
+    "heroPrimary": "Ver los protocolos",
+    "heroSecondary": "¿Qué tan grave es realmente?",
+    "severityKicker": "Por qué importa",
+    "severityTitle": "Se extendió más rápido de lo que la ciencia podía seguirle el ritmo",
+    "severityLead": "El panorama honesto es suficientemente inquietante sin necesidad de historias alarmistas.",
+    "stat1Label": "En nuestros cuerpos",
+    "stat1Value": "Sangre, placenta, cerebro",
+    "stat1Body": "Se han encontrado partículas de plástico en sangre humana, placentas, pulmones y tejido cerebral.",
+    "stat2Label": "En lo que bebemos",
+    "stat2Value": "240.000",
+    "stat2Body": "partículas de plástico medidas en un solo litro de agua embotellada (2024).",
+    "stat3Label": "Una primera señal cardíaca",
+    "stat3Value": "4,5× de riesgo",
+    "stat3Body": "el riesgo de infarto y accidente cerebrovascular para personas con microplásticos en la placa arterial. Una primera señal, aún no una causa probada.",
+    "severityPivot": "No podemos eliminar esto del mundo, ni de nosotros mismos. Lo único que aún está en nuestras manos es cuánto más dejamos entrar.",
+    "framingTitle": "Transparentes sobre la evidencia",
+    "framingBody": "Clasificamos cada afirmación en este sitio y evitamos las historias alarmistas. Dos cosas están más claras de lo que sugieren los titulares.",
+    "framing1Title": "La exposición es real y medible",
+    "framing1Body": "Podemos contar las partículas en el agua, el aire y los alimentos, y puedes reducir ese número con unos pocos hábitos baratos y duraderos.",
+    "framing2Title": "Los químicos son lo más importante",
+    "framing2Body": "El daño está mucho mejor demostrado para los químicos del plástico (BPA, ftalatos, PFAS) que para las propias partículas, así que reducirlos es lo primero.",
+    "topProtocolsTitle": "Empieza aquí: los protocolos que se sostienen",
+    "topProtocolsLead": "Clasificados por la solidez de la evidencia y cuánto reducen realmente tu exposición, no por lo que hace un titular impactante.",
+    "checkTitle": "¿De dónde viene tu exposición?",
+    "checkLead": "Responde unas pocas preguntas y obtén una lista corta y priorizada de qué cambiar, en unos dos minutos. Sin registro, y nada sale de tu dispositivo.",
+    "mythTeaserTitle": "Evita los remedios falsos",
+    "mythTeaserLead": "La donación de sangre, sudar en la sauna, suplementos \"detox\", la cifra de una tarjeta de crédito a la semana. Esto es lo que dice realmente la evidencia.",
+    "mythTeaserCta": "Ver los mitos"
+  },
+  "footer": {
+    "rights": "Plastic Protocols",
+    "builtNote": "Una guía independiente con clasificación de evidencia. Educativa, no es consejo médico.",
+    "methodology": "Cómo clasificamos la evidencia",
+    "allSources": "Todas las fuentes"
+  },
+  "sourcesPage": {
+    "title": "Fuentes y método",
+    "lead": "Cómo clasificamos la evidencia, y cada estudio en el que se basa este sitio.",
+    "gradingTitle": "Cómo clasificamos la evidencia",
+    "gradingLead": "Cada afirmación en este sitio lleva una de cinco etiquetas. Aquí se explica exactamente qué significa cada una.",
+    "principlesTitle": "Nuestros principios",
+    "principles": {
+      "p1": "Separamos las partículas de plástico de los químicos asociados al plástico, pues tienen evidencias muy distintas.",
+      "p2": "Detectar no es dañar. Encontrar partículas en el cuerpo no es lo mismo que probar que causan enfermedad.",
+      "p3": "Citamos investigación primaria y organismos reguladores, y señalamos cifras populares que no se sostienen.",
+      "p4": "Esto es educación, no consejo médico."
+    },
+    "bibTitle": "Bibliografía completa",
+    "bibLead": "Todas las fuentes citadas en los protocolos y mitos, sin duplicados."
+  },
+  "protocolsPage": {
+    "title": "Los protocolos",
+    "lead": "Clasificados por evidencia, ordenados por la solidez de la ciencia y cuánto reducen realmente tu exposición. Añade los que vayas a seguir a tu plan.",
+    "filterGrade": "Evidencia",
+    "filterType": "Enfoque",
+    "all": "Todos",
+    "results": "{count} protocolos",
+    "none": "Ningún protocolo coincide con estos filtros.",
+    "reset": "Restablecer filtros",
+    "sortedNote": "Ordenados por solidez de la evidencia",
+    "planTitle": "Tu plan de acción",
+    "planEmpty": "Toca + en cualquier protocolo para crear un plan de acción personal. Se guarda solo en este dispositivo.",
+    "planCount": "{count} guardados",
+    "clear": "Borrar"
+  },
+  "mythsPage": {
+    "title": "Mitos y afirmaciones exageradas",
+    "lead": "Algunos de los 'hechos' y 'soluciones' sobre microplásticos más compartidos no sobreviven al contacto con la evidencia. Esto es lo que realmente ocurre, y qué hacer en su lugar.",
+    "intro": "Los clasificamos de la misma manera que todo lo demás. 'Refutado' significa que la evidencia contradice la afirmación; 'débil' significa que está exagerada; 'sin demostrar' significa que es plausible pero no probada."
+  },
+  "sciencePage": {
+    "title": "La ciencia, con honestidad",
+    "lead": "Lo que realmente sabemos sobre los microplásticos: las partes sólidas, las partes inciertas y los titulares que fueron demasiado lejos.",
+    "s1Kicker": "El punto de partida",
+    "s1Title": "Los plásticos diminutos están en todas partes, incluso en nosotros",
+    "s1Body": "Se han encontrado micro y nanoplásticos en sangre humana, pulmones, placenta e incluso tejido cerebral. Esa detección es real y reproducible. Pero detectar no es lo mismo que dañar, las mediciones conllevan una enorme incertidumbre, y la Organización Mundial de la Salud concluyó que la evidencia disponible aún no demuestra un riesgo para la salud en los niveles de exposición actuales, señalando importantes vacíos de datos.",
+    "s2Kicker": "Exposición",
+    "s2Title": "¿Cuánto absorbemos realmente?",
+    "s2Body": "La respuesta honesta es: nadie lo sabe con precisión, y el rango es enorme. La estimación más citada es de aproximadamente 74.000 a 121.000 partículas al año, pero una revisión de 76 estudios encontró estimaciones diarias que abarcan seis órdenes de magnitud. Los métodos de conteo no están estandarizados, así que trata cada cifra concreta como una indicación de orden de magnitud, no como un hecho.",
+    "s2ChartTitle": "Partículas de plástico del agua, por año",
+    "s2ChartUnit": "partículas / año",
+    "s2BarTap": "Bebedor de agua del grifo",
+    "s2BarBottled": "Bebedor de agua embotellada",
+    "s2ChartNote": "Recuentos de partículas, no masa. Elegir agua embotellada sobre agua del grifo añade aproximadamente 20 veces más partículas al año, y como cada cifra en este campo, estas conllevan una gran incertidumbre.",
+    "s3Kicker": "Fuentes",
+    "s3Title": "De dónde viene tu exposición",
+    "s3Body": "No todas las fuentes son iguales. Ordenadas por la confianza con que se vinculan a la exposición humana, un puñado de hábitos cotidianos domina, y la mayoría son baratos de cambiar.",
+    "s3ChartTitle": "Fuentes de la vida diaria, ordenadas por contribución a la exposición",
+    "s4Kicker": "La distinción crucial",
+    "s4Title": "Partículas frente a químicos",
+    "s4Body": "Esta es la idea más importante del sitio. El daño de los plásticos está mucho mejor evidenciado para los químicos asociados al plástico (BPA, ftalatos, PFAS) que para las propias partículas de plástico. Los reguladores han actuado sobre los químicos: la UE prohibió el BPA en materiales en contacto con alimentos en 2025, y el PFOA está ahora clasificado como carcinógeno para los humanos. Las partículas siguen siendo un riesgo plausible pero en gran medida no demostrado.",
+    "s4ParticleTitle": "Partículas",
+    "s4ParticleBody": "Exposición probada; daño en humanos en gran medida no demostrado. La señal más fuerte es un estudio de 2024 que vincula partículas en la placa arterial con mayor riesgo cardiovascular, llamativo, pero observacional y no replicado.",
+    "s4ChemicalTitle": "Químicos",
+    "s4ChemicalBody": "Toxicología mejor evidenciada y acción regulatoria real. Reducirlos, mediante alimentos frescos, menos productos con fragancia, sin envases con PFAS, es donde la ciencia es más firme.",
+    "s5Kicker": "Mapa de evidencia",
+    "s5Title": "¿Qué tan sólida es la evidencia, realmente?",
+    "s5Body": "Entre las afirmaciones que revisamos, la mayoría se sitúan en 'emergente' o 'sólida', pero varias ideas populares caen en 'débil', 'sin demostrar' o directamente 'refutado'.",
+    "s6Kicker": "La conclusión",
+    "s6Title": "Precaución sin pánico",
+    "s6Body": "No necesitas temer cada botella de agua. Pero dado que la exposición es real, creciente y barata de reducir, vale la pena hacer cambios sensatos, especialmente los que también reducen la exposición a químicos. Para eso son exactamente los protocolos.",
+    "s6Cta": "Ver los protocolos"
+  },
+  "checkPage": {
+    "title": "Tu autoevaluación de exposición en 2 minutos",
+    "lead": "Responde unas pocas preguntas sobre tus hábitos diarios. Crearemos un plan de acción priorizado, nada se envía a ningún lado, todo queda en tu dispositivo.",
+    "start": "Iniciar la evaluación",
+    "question": "Pregunta {n} de {total}",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "seeResults": "Ver mi plan",
+    "restart": "Volver a empezar",
+    "resultTitle": "Tu plan priorizado",
+    "resultLead": "Según tus respuestas, estos protocolos reducirán más tu exposición. Añádelos a tu plan y empieza por el primero.",
+    "topMatch": "Prioridad máxima",
+    "addAll": "Añadir todos a mi plan",
+    "allGood": "Ya estás aplicando los fundamentos de mayor impacto. Explora todos los protocolos para ir más lejos.",
+    "browseAll": "Explorar todos los protocolos",
+    "q": {
+      "water": {
+        "q": "¿Qué sueles beber en casa?",
+        "bottled": "Principalmente agua embotellada",
+        "tap": "Principalmente agua del grifo",
+        "filtered": "Agua del grifo filtrada"
+      },
+      "food": {
+        "q": "¿Con qué frecuencia comes alimentos enlatados o envasados en plástico?",
+        "often": "La mayoría de los días",
+        "sometimes": "Unas pocas veces a la semana",
+        "rarely": "Raramente, principalmente fresco/congelado"
+      },
+      "heat": {
+        "q": "¿Calientas o cocinas alimentos en recipientes de plástico en el microondas?",
+        "yes": "Sí, con regularidad",
+        "sometimes": "A veces",
+        "no": "No, uso vidrio/cerámica"
+      },
+      "cook": {
+        "q": "¿Con qué cocinas más?",
+        "nonstick": "Sartenes antiadherentes (algunas rayadas)",
+        "mixed": "Una mezcla",
+        "metal": "Acero inoxidable / hierro fundido / vidrio"
+      },
+      "tea": {
+        "q": "¿Cómo preparas el té y hierves el agua?",
+        "plastic": "Bolsas de té + hervidor de plástico",
+        "paper": "Bolsas de papel + hervidor de plástico",
+        "loose": "Hoja suelta + hervidor de vidrio/acero"
+      },
+      "home": {
+        "q": "Tu hogar: textiles y aire?",
+        "synthetic": "Muchos sintéticos, ventilo pocas veces",
+        "some": "Una mezcla de ambos",
+        "natural": "Principalmente fibras naturales, ventilo con frecuencia"
+      },
+      "chem": {
+        "q": "¿Evitas los químicos del plástico (PVC, PFAS, fragancia)?",
+        "no": "Nunca lo he pensado",
+        "some": "Un poco",
+        "yes": "Sí, reviso las etiquetas"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+[build]
+  command = "bun run generate"
+  publish = ".output/public"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Nuxt (Nitro) writes the prerendered static site to dist/ when NITRO_PRESET=static.
+[build.processing]
+  skip_processing = false

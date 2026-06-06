@@ -1,0 +1,243 @@
+{
+  "site": {
+    "name": "Plastic Protocols",
+    "tagline": "Bewezen stappen om je blootstelling aan microplastics te verlagen"
+  },
+  "nav": {
+    "home": "Home",
+    "science": "De wetenschap",
+    "protocols": "Protocollen",
+    "myths": "Mythes",
+    "check": "Zelftest",
+    "sources": "Bronnen",
+    "menu": "Menu",
+    "close": "Sluiten",
+    "skip": "Naar inhoud"
+  },
+  "lang": {
+    "switch": "Taal",
+    "en": "English",
+    "nl": "Nederlands"
+  },
+  "grade": {
+    "strong": "Sterk bewijs",
+    "emerging": "Opkomend bewijs",
+    "weak": "Zwak bewijs",
+    "unproven": "Onbewezen",
+    "debunked": "Ontkracht",
+    "short": {
+      "strong": "Sterk",
+      "emerging": "Opkomend",
+      "weak": "Zwak",
+      "unproven": "Onbewezen",
+      "debunked": "Ontkracht"
+    },
+    "desc": {
+      "strong": "Robuust, meerdere studies of consensus van toezichthouders.",
+      "emerging": "Een echt signaal, maar betwist of nog niet sluitend.",
+      "weak": "Beperkt of indirect bewijs, of overdreven kopcijfers.",
+      "unproven": "Plausibel, maar geen onderbouwend bewijs bij mensen.",
+      "debunked": "Een populaire claim die het bewijs tegenspreekt."
+    }
+  },
+  "evidenceType": {
+    "particle": "Deeltjes",
+    "chemical": "Chemicaliën",
+    "both": "Deeltjes + chemicaliën"
+  },
+  "meta": {
+    "impact": "Impact",
+    "effort": "Moeite",
+    "cost": "Kosten",
+    "high": "Hoog",
+    "medium": "Gemiddeld",
+    "low": "Laag",
+    "free": "Gratis",
+    "higher": "Hoger"
+  },
+  "common": {
+    "readMore": "Lees het protocol",
+    "viewAllProtocols": "Alle protocollen",
+    "sources": "Bronnen",
+    "source": "Bron",
+    "evidence": "Bewijs",
+    "whatToDo": "Wat te doen",
+    "whyItWorks": "Waarom het werkt",
+    "theFullStory": "Het hele verhaal",
+    "theCatch": "De eerlijke kanttekening",
+    "backToProtocols": "Alle protocollen",
+    "backToMyths": "Alle mythes",
+    "startCheck": "Doe de zelftest van 2 minuten",
+    "addToPlan": "Aan mijn plan toevoegen",
+    "inPlan": "In je plan",
+    "done": "Klaar",
+    "loading": "Laden…"
+  },
+  "home": {
+    "kicker": "Microplastics zitten al in ons",
+    "heroTitle": "Microplastics ontkom je niet. Maar je kunt er veel minder van binnenkrijgen.",
+    "heroLead": "Ze zitten in de oceaan, de lucht, ons eten, en inmiddels in ons bloed, onze placenta en onze hersenen. Dat maakt niemand meer ongedaan. Wat je wél kunt veranderen is hoeveel er nog bij komt, en een paar bewezen aanpassingen doen precies dat.",
+    "heroPrimary": "Bekijk de protocollen",
+    "heroSecondary": "Hoe erg is het echt?",
+    "severityKicker": "Waarom het ertoe doet",
+    "severityTitle": "Het verspreidde zich sneller dan de wetenschap kon bijbenen",
+    "severityLead": "Het eerlijke beeld is verontrustend genoeg, ook zonder horrorverhalen.",
+    "stat1Label": "In ons lichaam",
+    "stat1Value": "Bloed, placenta, brein",
+    "stat1Body": "Plasticdeeltjes zijn aangetroffen in menselijk bloed, placenta's, longen en hersenweefsel.",
+    "stat2Label": "In wat we drinken",
+    "stat2Value": "240.000",
+    "stat2Body": "plasticdeeltjes gemeten in één liter flessenwater (2024).",
+    "stat3Label": "Een vroeg hartsignaal",
+    "stat3Value": "4,5× risico",
+    "stat3Body": "het risico op een hartaanval of beroerte bij mensen met microplastics in hun slagaderplaque. Een eerste signaal, nog geen bewezen oorzaak.",
+    "severityPivot": "We krijgen dit niet meer uit de wereld, of uit onszelf. Het enige dat we nog in de hand hebben, is hoeveel er nog bij komt.",
+    "framingTitle": "Eerlijk over het bewijs",
+    "framingBody": "We graderen elke claim op deze site en laten de horrorverhalen achterwege. Twee dingen zijn duidelijker dan de koppen suggereren.",
+    "framing1Title": "Blootstelling is echt en meetbaar",
+    "framing1Body": "We kunnen de deeltjes in water, lucht en voeding tellen, en dat aantal breng je omlaag met een paar goedkope, blijvende gewoontes.",
+    "framing2Title": "De chemicaliën wegen het zwaarst",
+    "framing2Body": "De schade is veel beter bewezen voor de chemicaliën in plastic (BPA, ftalaten, PFAS) dan voor de deeltjes zelf, dus die terugdringen komt eerst.",
+    "topProtocolsTitle": "Begin hier: de protocollen die standhouden",
+    "topProtocolsLead": "Gerangschikt op hoe sterk het bewijs is en hoeveel ze je blootstelling echt verlagen, niet op wat de engste kop oplevert.",
+    "checkTitle": "Waar komt jouw blootstelling vandaan?",
+    "checkLead": "Beantwoord een paar vragen en krijg in zo'n twee minuten een korte, geprioriteerde lijst van wat je kunt veranderen. Geen account, en niets verlaat je apparaat.",
+    "mythTeaserTitle": "Sla de nepoplossingen over",
+    "mythTeaserLead": "Bloed doneren, zweten in de sauna, \"detox\"-supplementen, het credit-card-per-week-cijfer. Dit is wat het bewijs werkelijk zegt.",
+    "mythTeaserCta": "Bekijk de mythes"
+  },
+  "footer": {
+    "rights": "Plastic Protocols",
+    "builtNote": "Een onafhankelijke, op bewijs gegradeerde gids. Educatief, geen medisch advies.",
+    "methodology": "Hoe we bewijs graderen",
+    "allSources": "Alle bronnen"
+  },
+  "sourcesPage": {
+    "title": "Bronnen & methode",
+    "lead": "Hoe we bewijs graderen, en elke studie waarop deze site rust.",
+    "gradingTitle": "Hoe we bewijs graderen",
+    "gradingLead": "Elke claim op deze site draagt een van vijf labels. Dit is precies wat ze betekenen.",
+    "principlesTitle": "Onze uitgangspunten",
+    "principles": {
+      "p1": "We scheiden plasticdeeltjes van plastic-gerelateerde chemicaliën, het bewijs verschilt sterk.",
+      "p2": "Detectie is geen schade. Deeltjes in het lichaam vinden is niet hetzelfde als bewijzen dat ze ziekte veroorzaken.",
+      "p3": "We citeren primair onderzoek en toezichthouders, en markeren populaire cijfers die niet standhouden.",
+      "p4": "Dit is educatie, geen medisch advies."
+    },
+    "bibTitle": "Volledige bronnenlijst",
+    "bibLead": "Alle bronnen uit de protocollen en mythes, ontdubbeld."
+  },
+  "protocolsPage": {
+    "title": "De protocollen",
+    "lead": "Op bewijs gegradeerd, gerangschikt op hoe sterk de wetenschap is en hoeveel ze je blootstelling echt verlagen. Voeg de protocollen die je gaat doen toe aan je plan.",
+    "filterGrade": "Bewijs",
+    "filterType": "Focus",
+    "all": "Alle",
+    "results": "{count} protocollen",
+    "none": "Geen protocollen passen bij deze filters.",
+    "reset": "Filters wissen",
+    "sortedNote": "Gesorteerd op bewijskracht",
+    "planTitle": "Jouw actieplan",
+    "planEmpty": "Tik op + bij een protocol om een persoonlijk actieplan te bouwen. Het wordt alleen op dit apparaat bewaard.",
+    "planCount": "{count} opgeslagen",
+    "clear": "Wissen"
+  },
+  "mythsPage": {
+    "title": "Mythes & overdreven claims",
+    "lead": "Sommige van de meest gedeelde microplastic-'feiten' en 'oplossingen' overleven het bewijs niet. Dit is wat er werkelijk speelt, en wat je in plaats daarvan kunt doen.",
+    "intro": "We graderen deze net als al het andere. 'Ontkracht' betekent dat het bewijs de claim tegenspreekt; 'zwak' betekent overdreven; 'onbewezen' betekent plausibel maar ongetest."
+  },
+  "sciencePage": {
+    "title": "De wetenschap, eerlijk",
+    "lead": "Wat we echt weten over microplastics, de sterke delen, de onzekere delen, en de koppen die te ver gingen.",
+    "s1Kicker": "Het uitgangspunt",
+    "s1Title": "Minuscuul plastic zit overal, ook in ons",
+    "s1Body": "Micro- en nanoplastics zijn aangetroffen in menselijk bloed, longen, placenta en zelfs hersenweefsel. Die detectie is reëel en reproduceerbaar. Maar detectie is niet hetzelfde als schade, de metingen kennen enorme onzekerheid, en de Wereldgezondheidsorganisatie concludeerde dat het beschikbare bewijs nog geen gezondheidsrisico aantoont bij de huidige blootstellingsniveaus, terwijl ze wijst op grote hiaten in de data.",
+    "s2Kicker": "Blootstelling",
+    "s2Title": "Hoeveel krijgen we echt binnen?",
+    "s2Body": "Het eerlijke antwoord: niemand weet het precies, en de spreiding is enorm. De meest geciteerde schatting is grofweg 74.000–121.000 deeltjes per jaar, maar een review van 76 studies vond dagschattingen over zes ordes van grootte. Telmethoden zijn niet gestandaardiseerd, dus behandel elk specifiek getal als een grootteorde-indicatie, niet als een feit.",
+    "s2ChartTitle": "Plasticdeeltjes uit water, per jaar",
+    "s2ChartUnit": "deeltjes / jaar",
+    "s2BarTap": "Kraanwaterdrinker",
+    "s2BarBottled": "Flessenwaterdrinker",
+    "s2ChartNote": "Deeltjestellingen, geen massa. Flessenwater in plaats van kraan voegt ruwweg 20× meer deeltjes per jaar toe, en net als elk cijfer in dit veld met grote onzekerheid.",
+    "s3Kicker": "Bronnen",
+    "s3Title": "Waar je blootstelling vandaan komt",
+    "s3Body": "Niet alle bronnen zijn gelijk. Gerangschikt naar hoe overtuigend ze gekoppeld zijn aan menselijke blootstelling, domineert een handvol dagelijkse gewoontes, en de meeste zijn goedkoop aan te passen.",
+    "s3ChartTitle": "Bronnen uit het dagelijks leven, gerangschikt naar bijdrage",
+    "s4Kicker": "Het cruciale onderscheid",
+    "s4Title": "Deeltjes versus chemicaliën",
+    "s4Body": "Dit is het belangrijkste idee op de site. De schade van plastic is veel beter onderbouwd voor de chemicaliën die met plastic samenhangen (BPA, ftalaten, PFAS) dan voor de plasticdeeltjes zelf. Toezichthouders hebben gehandeld op de chemicaliën: de EU verbood BPA in voedselcontactmateriaal in 2025, en PFOA is nu geclassificeerd als kankerverwekkend voor mensen. De deeltjes blijven een plausibel maar grotendeels onbewezen risico.",
+    "s4ParticleTitle": "Deeltjes",
+    "s4ParticleBody": "Blootstelling bewezen; schade bij mensen grotendeels onbewezen. Het sterkste signaal is een studie uit 2024 die deeltjes in slagaderplaque koppelt aan hoger hart- en vaatrisico, opvallend, maar observationeel en niet gerepliceerd.",
+    "s4ChemicalTitle": "Chemicaliën",
+    "s4ChemicalBody": "Beter onderbouwde toxicologie en echte regelgeving. Deze verminderen, via vers voedsel, minder geparfumeerde producten, geen PFAS-verpakking, is waar de wetenschap het stevigst is.",
+    "s5Kicker": "Bewijskaart",
+    "s5Title": "Hoe sterk is het bewijs werkelijk?",
+    "s5Body": "Van de claims die we beoordeelden zit het merendeel in 'opkomend' of 'sterk', maar diverse populaire ideeën belanden in 'zwak', 'onbewezen' of ronduit 'ontkracht'.",
+    "s6Kicker": "De conclusie",
+    "s6Title": "Voorzichtigheid zonder paniek",
+    "s6Body": "Je hoeft niet bang te zijn voor elk flesje water. Maar omdat blootstelling reëel is, toeneemt en goedkoop te verminderen, zijn verstandige aanpassingen de moeite waard, vooral die ook chemische blootstelling verlagen. Daar zijn de protocollen voor.",
+    "s6Cta": "Bekijk de protocollen"
+  },
+  "checkPage": {
+    "title": "Jouw zelftest van 2 minuten",
+    "lead": "Beantwoord een paar vragen over je dagelijkse gewoontes. We bouwen een geprioriteerd actieplan, er wordt niets verstuurd, alles blijft op je apparaat.",
+    "start": "Start de zelftest",
+    "question": "Vraag {n} van {total}",
+    "next": "Volgende",
+    "back": "Terug",
+    "seeResults": "Toon mijn plan",
+    "restart": "Opnieuw beginnen",
+    "resultTitle": "Jouw geprioriteerde plan",
+    "resultLead": "Op basis van je antwoorden verlagen deze protocollen je blootstelling het meest. Voeg ze toe aan je plan en begin met de bovenste.",
+    "topMatch": "Hoogste prioriteit",
+    "addAll": "Alles aan mijn plan toevoegen",
+    "allGood": "Je doet de basis met hoge impact al. Bekijk alle protocollen om verder te gaan.",
+    "browseAll": "Bekijk alle protocollen",
+    "q": {
+      "water": {
+        "q": "Wat drink je meestal thuis?",
+        "bottled": "Vooral flessenwater",
+        "tap": "Vooral kraanwater",
+        "filtered": "Gefilterd kraanwater"
+      },
+      "food": {
+        "q": "Hoe vaak eet je voedsel uit blik of plasticverpakking?",
+        "often": "Bijna dagelijks",
+        "sometimes": "Een paar keer per week",
+        "rarely": "Zelden, vooral vers/diepvries"
+      },
+      "heat": {
+        "q": "Verwarm je voedsel in plastic in de magnetron?",
+        "yes": "Ja, regelmatig",
+        "sometimes": "Soms",
+        "no": "Nee, ik gebruik glas/keramiek"
+      },
+      "cook": {
+        "q": "Waar kook je het meest mee?",
+        "nonstick": "Antiaanbakpannen (sommige bekrast)",
+        "mixed": "Een mix",
+        "metal": "Roestvrij staal / gietijzer / glas"
+      },
+      "tea": {
+        "q": "Hoe maak je thee en kook je water?",
+        "plastic": "Theezakjes + plastic waterkoker",
+        "paper": "Papieren zakjes + plastic waterkoker",
+        "loose": "Losse thee + glazen/stalen waterkoker"
+      },
+      "home": {
+        "q": "Je huis: textiel en lucht?",
+        "synthetic": "Veel synthetisch, zelden ventileren",
+        "some": "Een beetje van beide",
+        "natural": "Vooral natuurlijke vezels, vaak ventileren"
+      },
+      "chem": {
+        "q": "Vermijd je plasticchemicaliën (PVC, PFAS, parfum)?",
+        "no": "Nooit over nagedacht",
+        "some": "Een beetje",
+        "yes": "Ja, ik lees etiketten"
+      }
+    }
+  }
+}

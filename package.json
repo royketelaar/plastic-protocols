@@ -1,33 +1,31 @@
 {
   "name": "plastic-protocols",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev -H 0.0.0.0",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^15.22.7",
-    "@next/third-parties": "^15.0.3",
-    "contentful": "^10.12.7",
-    "dotenv": "^16.4.5",
-    "hamburgers": "^1.2.1",
-    "next": "14.2.4",
-    "react": "^18",
-    "react-cookie-consent": "^9.0.0",
-    "react-dom": "^18",
-    "sass": "^1.77.8"
+    "@nuxt/content": "^3.14.0",
+    "@nuxt/fonts": "^0.14.0",
+    "@nuxt/icon": "^2.1.0",
+    "@nuxt/image": "^2.0.0",
+    "@nuxtjs/i18n": "^10.4.0",
+    "better-sqlite3": "^11.8.1",
+    "nuxt": "^4.4.7",
+    "vue": "latest",
+    "vue-router": "latest"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.4",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "@iconify-json/lucide": "^1.2.20",
+    "@playwright/test": "^1.49.1",
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0"
   }
 }

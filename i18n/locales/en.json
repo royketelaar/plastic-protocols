@@ -1,0 +1,243 @@
+{
+  "site": {
+    "name": "Plastic Protocols",
+    "tagline": "Evidence-based steps to cut your microplastic exposure"
+  },
+  "nav": {
+    "home": "Home",
+    "science": "The science",
+    "protocols": "Protocols",
+    "myths": "Myths",
+    "check": "Self-check",
+    "sources": "Sources",
+    "menu": "Menu",
+    "close": "Close",
+    "skip": "Skip to content"
+  },
+  "lang": {
+    "switch": "Language",
+    "en": "English",
+    "nl": "Nederlands"
+  },
+  "grade": {
+    "strong": "Strong evidence",
+    "emerging": "Emerging evidence",
+    "weak": "Weak evidence",
+    "unproven": "Unproven",
+    "debunked": "Debunked",
+    "short": {
+      "strong": "Strong",
+      "emerging": "Emerging",
+      "weak": "Weak",
+      "unproven": "Unproven",
+      "debunked": "Debunked"
+    },
+    "desc": {
+      "strong": "Robust, multi-study or regulatory consensus.",
+      "emerging": "A real signal, but contested or not yet conclusive.",
+      "weak": "Limited or indirect evidence, or headline numbers overstated.",
+      "unproven": "Plausible, but no supporting human evidence.",
+      "debunked": "A popular claim that the evidence contradicts."
+    }
+  },
+  "evidenceType": {
+    "particle": "Particles",
+    "chemical": "Chemicals",
+    "both": "Particles + chemicals"
+  },
+  "meta": {
+    "impact": "Impact",
+    "effort": "Effort",
+    "cost": "Cost",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low",
+    "free": "Free",
+    "higher": "Higher"
+  },
+  "common": {
+    "readMore": "Read the protocol",
+    "viewAllProtocols": "View all protocols",
+    "sources": "Sources",
+    "source": "Source",
+    "evidence": "Evidence",
+    "whatToDo": "What to do",
+    "whyItWorks": "Why it works",
+    "theFullStory": "The full story",
+    "theCatch": "The honest caveat",
+    "backToProtocols": "All protocols",
+    "backToMyths": "All myths",
+    "startCheck": "Take the 2-minute self-check",
+    "addToPlan": "Add to my plan",
+    "inPlan": "In your plan",
+    "done": "Done",
+    "loading": "Loading…"
+  },
+  "home": {
+    "kicker": "Microplastics are already inside us",
+    "heroTitle": "You can't escape microplastics. But you can take in far less.",
+    "heroLead": "They're in the ocean, the air, our food, and by now our blood, placentas and brains. Nobody can undo that. What you can still change is how much more gets into your body, and a few proven swaps do exactly that.",
+    "heroPrimary": "See the protocols",
+    "heroSecondary": "How bad is it really?",
+    "severityKicker": "Why it matters",
+    "severityTitle": "It spread faster than the science could keep up",
+    "severityLead": "The honest picture is unsettling enough without the scare stories.",
+    "stat1Label": "In our bodies",
+    "stat1Value": "Blood, placenta, brain",
+    "stat1Body": "Plastic particles have turned up in human blood, placentas, lungs and brain tissue.",
+    "stat2Label": "In what we drink",
+    "stat2Value": "240,000",
+    "stat2Body": "plastic particles measured in a single litre of bottled water (2024).",
+    "stat3Label": "An early heart signal",
+    "stat3Value": "4.5× risk",
+    "stat3Body": "the heart-attack and stroke risk for people with microplastics in their artery plaque. A first signal, not yet proven cause.",
+    "severityPivot": "We can't pull this back out of the world, or out of ourselves. The one thing still in our hands is how much more we let in.",
+    "framingTitle": "Straight with you about the evidence",
+    "framingBody": "We grade every claim on this site and skip the scare stories. Two things are clearer than the headlines suggest.",
+    "framing1Title": "Exposure is real and measurable",
+    "framing1Body": "We can count the particles in water, air and food, and you can bring that count down with a few cheap, lasting habits.",
+    "framing2Title": "The chemicals matter most",
+    "framing2Body": "The harm is far better proven for the chemicals in plastic (BPA, phthalates, PFAS) than for the particles themselves, so cutting those comes first.",
+    "topProtocolsTitle": "Start here: the protocols that hold up",
+    "topProtocolsLead": "Ranked by how strong the evidence is and how much they actually cut your exposure, not by what makes a scary headline.",
+    "checkTitle": "Where does your exposure come from?",
+    "checkLead": "Answer a few questions and get a short, prioritised list of what to change, in about two minutes. No sign-up, and nothing leaves your device.",
+    "mythTeaserTitle": "Skip the fake fixes",
+    "mythTeaserLead": "Blood donation, sauna sweating, \"detox\" supplements, the credit-card-a-week figure. Here is what the evidence actually says.",
+    "mythTeaserCta": "See the myths"
+  },
+  "footer": {
+    "rights": "Plastic Protocols",
+    "builtNote": "An independent, evidence-graded guide. Educational, not medical advice.",
+    "methodology": "How we grade evidence",
+    "allSources": "All sources"
+  },
+  "sourcesPage": {
+    "title": "Sources & method",
+    "lead": "How we grade evidence, and every study this site stands on.",
+    "gradingTitle": "How we grade evidence",
+    "gradingLead": "Every claim on this site carries one of five labels. Here is exactly what each one means.",
+    "principlesTitle": "Our principles",
+    "principles": {
+      "p1": "We separate plastic particles from plastic-associated chemicals, they have very different evidence.",
+      "p2": "Detection is not harm. Finding particles in the body is not the same as proving they cause disease.",
+      "p3": "We cite primary research and regulators, and we flag popular numbers that don't hold up.",
+      "p4": "This is education, not medical advice."
+    },
+    "bibTitle": "Full bibliography",
+    "bibLead": "Every source cited across the protocols and myths, de-duplicated."
+  },
+  "protocolsPage": {
+    "title": "The protocols",
+    "lead": "Evidence-graded, ranked by how strong the science is and how much they actually lower your exposure. Add the ones you'll do to your plan.",
+    "filterGrade": "Evidence",
+    "filterType": "Focus",
+    "all": "All",
+    "results": "{count} protocols",
+    "none": "No protocols match these filters.",
+    "reset": "Reset filters",
+    "sortedNote": "Sorted by strength of evidence",
+    "planTitle": "Your action plan",
+    "planEmpty": "Tap + on any protocol to build a personal action plan. It's saved on this device only.",
+    "planCount": "{count} saved",
+    "clear": "Clear"
+  },
+  "mythsPage": {
+    "title": "Myths & overstated claims",
+    "lead": "Some of the most-shared microplastic 'facts' and 'fixes' don't survive contact with the evidence. Here's what's really going on, and what to do instead.",
+    "intro": "We grade these the same way as everything else. 'Debunked' means the evidence contradicts the claim; 'weak' means it's exaggerated; 'unproven' means it's plausible but untested."
+  },
+  "sciencePage": {
+    "title": "The science, honestly",
+    "lead": "What we actually know about microplastics, the strong parts, the uncertain parts, and the headlines that went too far.",
+    "s1Kicker": "The starting point",
+    "s1Title": "Tiny plastics are everywhere, including in us",
+    "s1Body": "Micro- and nanoplastics have been found in human blood, lungs, placenta and even brain tissue. That detection is real and reproducible. But detection is not the same as harm, the measurements carry huge uncertainty, and the World Health Organization concluded the available evidence does not yet demonstrate a health risk at current exposure levels, while flagging major data gaps.",
+    "s2Kicker": "Exposure",
+    "s2Title": "How much do we really take in?",
+    "s2Body": "The honest answer is: nobody knows precisely, and the range is enormous. The most-cited estimate is roughly 74,000–121,000 particles a year, but a review of 76 studies found daily estimates spanning six orders of magnitude. Counting methods aren't standardized, so treat every specific number as an order-of-magnitude indication, not a fact.",
+    "s2ChartTitle": "Plastic particles from water, per year",
+    "s2ChartUnit": "particles / year",
+    "s2BarTap": "Tap-water drinker",
+    "s2BarBottled": "Bottled-water drinker",
+    "s2ChartNote": "Particle counts, not mass. Choosing bottled over tap adds roughly 20× more particles a year, and like every figure in this field, these carry wide uncertainty.",
+    "s3Kicker": "Sources",
+    "s3Title": "Where your exposure comes from",
+    "s3Body": "Not all sources are equal. Ranked by how confidently they're linked to human exposure, a handful of everyday habits dominate, and most are cheap to change.",
+    "s3ChartTitle": "Daily-life sources, ranked by exposure contribution",
+    "s4Kicker": "The crucial distinction",
+    "s4Title": "Particles vs. chemicals",
+    "s4Body": "This is the single most important idea on the site. The harm from plastics is far better-evidenced for the chemicals associated with plastic (BPA, phthalates, PFAS) than for the plastic particles themselves. Regulators have acted on the chemicals: the EU banned BPA in food-contact materials in 2025, and PFOA is now classified as carcinogenic to humans. The particles remain a plausible but largely unproven risk.",
+    "s4ParticleTitle": "Particles",
+    "s4ParticleBody": "Exposure proven; harm in humans largely unproven. The strongest signal is a 2024 study linking particles in artery plaque to higher cardiovascular risk, striking, but observational and unreplicated.",
+    "s4ChemicalTitle": "Chemicals",
+    "s4ChemicalBody": "Better-evidenced toxicology and real regulatory action. Reducing these, via fresh food, fewer fragranced products, no PFAS packaging, is where the science is firmest.",
+    "s5Kicker": "Evidence map",
+    "s5Title": "How strong is the evidence, really?",
+    "s5Body": "Across the claims we reviewed, most sit in 'emerging' or 'strong', but several popular ideas land in 'weak', 'unproven' or outright 'debunked'.",
+    "s6Kicker": "The bottom line",
+    "s6Title": "Precaution without panic",
+    "s6Body": "You don't need to fear every water bottle. But because exposure is real, rising, and cheap to reduce, sensible swaps are worth making, especially the ones that also cut chemical exposure. That's exactly what the protocols are for.",
+    "s6Cta": "See the protocols"
+  },
+  "checkPage": {
+    "title": "Your 2-minute exposure self-check",
+    "lead": "Answer a few questions about your daily habits. We'll build a prioritised action plan, nothing is sent anywhere, it all stays on your device.",
+    "start": "Start the check",
+    "question": "Question {n} of {total}",
+    "next": "Next",
+    "back": "Back",
+    "seeResults": "See my plan",
+    "restart": "Start over",
+    "resultTitle": "Your prioritised plan",
+    "resultLead": "Based on your answers, these protocols will lower your exposure the most. Add them to your plan and start with the top one.",
+    "topMatch": "Top priority",
+    "addAll": "Add all to my plan",
+    "allGood": "You're already doing the high-impact basics. Browse all protocols to go further.",
+    "browseAll": "Browse all protocols",
+    "q": {
+      "water": {
+        "q": "What do you usually drink at home?",
+        "bottled": "Mostly bottled water",
+        "tap": "Mostly tap water",
+        "filtered": "Filtered tap water"
+      },
+      "food": {
+        "q": "How often do you eat canned or plastic-packaged food?",
+        "often": "Most days",
+        "sometimes": "A few times a week",
+        "rarely": "Rarely, mostly fresh/frozen"
+      },
+      "heat": {
+        "q": "Do you microwave or heat food in plastic containers?",
+        "yes": "Yes, regularly",
+        "sometimes": "Sometimes",
+        "no": "No, I use glass/ceramic"
+      },
+      "cook": {
+        "q": "What do you cook with most?",
+        "nonstick": "Non-stick pans (some scratched)",
+        "mixed": "A mix",
+        "metal": "Stainless steel / cast iron / glass"
+      },
+      "tea": {
+        "q": "How do you make tea and boil water?",
+        "plastic": "Tea bags + plastic kettle",
+        "paper": "Paper bags + plastic kettle",
+        "loose": "Loose-leaf + glass/steel kettle"
+      },
+      "home": {
+        "q": "Your home: textiles and air?",
+        "synthetic": "Lots of synthetics, rarely ventilate",
+        "some": "Some of each",
+        "natural": "Mostly natural fibres, ventilate often"
+      },
+      "chem": {
+        "q": "Do you avoid plastic chemicals (PVC, PFAS, fragrance)?",
+        "no": "Never thought about it",
+        "some": "A little",
+        "yes": "Yes, I check labels"
+      }
+    }
+  }
+}

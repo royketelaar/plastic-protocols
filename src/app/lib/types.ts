@@ -1,1 +1,0 @@
-// TODO: I have to replace all the 'any' types with the correct types, those types are defined in the types.ts file.

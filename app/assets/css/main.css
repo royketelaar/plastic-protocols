@@ -1,0 +1,252 @@
+@import 'tailwindcss';
+
+/* Safelist the evidence-grade colour utilities (some are applied dynamically). */
+@source inline("{text-,bg-,border-}{strong,emerging,weak,unproven,debunked}");
+@source inline("{bg-,text-}{strong,emerging,weak,unproven,debunked}-soft");
+
+/* ------------------------------------------------------------------ *
+ * Plastic Protocols — "lab paper" editorial-scientific design system  *
+ * ------------------------------------------------------------------ */
+@theme {
+  /* Typography */
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-sans: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Spline Sans Mono', ui-monospace, 'SF Mono', monospace;
+
+  /* Surfaces — warm printed paper */
+  --color-paper: #fbf9f4;
+  --color-paper-2: #f3efe4;
+  --color-paper-3: #ebe6d8;
+
+  /* Ink */
+  --color-ink: #16201e;
+  --color-ink-soft: #495551;
+  --color-ink-faint: #5e6a66;
+  --color-line: #e4dfd2;
+  --color-line-strong: #d6d0bf;
+
+  /* Brand — ocean teal (logo: bottle dissolving into particles) */
+  --color-teal: #0c6f78;
+  --color-teal-deep: #0a5860;
+  --color-teal-soft: #d3e8e8;
+  --color-aqua: #18b3be;
+
+  /* Evidence-grade system (signature colour language) */
+  --color-strong: #0d6a62;
+  --color-strong-soft: #d6ebe7;
+  --color-emerging: #8f4c05;
+  --color-emerging-soft: #f5e6cf;
+  --color-weak: #4f5a5d;
+  --color-weak-soft: #e4e6e4;
+  --color-unproven: #566270;
+  --color-unproven-soft: #e6e9ec;
+  --color-debunked: #a62e23;
+  --color-debunked-soft: #f3dcd8;
+
+  /* Easing + radii */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --radius-card: 14px;
+}
+
+/* ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: 'ss01', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Display headings */
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    letter-spacing: -0.01em;
+  }
+
+  /* Numerals + data always tabular */
+  .tnum,
+  .font-mono {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+  }
+
+  ::selection {
+    background: var(--color-teal);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2.5px solid var(--color-teal);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Reusable component utilities                                        *
+ * ------------------------------------------------------------------ */
+@layer components {
+  /* Editorial content width + rhythm */
+  .measure {
+    max-width: 68ch;
+  }
+
+  /* Hairline rule with a printed feel */
+  .rule {
+    border: 0;
+    border-top: 1px solid var(--color-line);
+  }
+
+  /* Skip link */
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -3rem;
+    z-index: 100;
+    background: var(--color-ink);
+    color: var(--color-paper);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    transition: top 0.2s var(--ease-out-soft);
+  }
+  .skip-link:focus {
+    top: 1rem;
+  }
+}
+
+/* Prose — long-form content body (Nuxt Content markdown) */
+@layer components {
+  .prose-pp {
+    color: var(--color-ink-soft);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+  .prose-pp > * + * {
+    margin-top: 1.15em;
+  }
+  .prose-pp h2 {
+    margin-top: 2.4rem;
+    margin-bottom: 0.2rem;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+  }
+  .prose-pp h3 {
+    margin-top: 1.6rem;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+  .prose-pp strong {
+    color: var(--color-ink);
+    font-weight: 650;
+  }
+  .prose-pp a {
+    color: var(--color-teal-deep);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-color: color-mix(in srgb, var(--color-teal) 40%, transparent);
+  }
+  .prose-pp a:hover {
+    text-decoration-color: var(--color-teal);
+  }
+  .prose-pp ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .prose-pp ul > li {
+    position: relative;
+    padding-left: 1.6rem;
+    margin-top: 0.6rem;
+  }
+  .prose-pp ul > li::before {
+    content: '';
+    position: absolute;
+    left: 0.2rem;
+    top: 0.72em;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 9999px;
+    background: var(--color-teal);
+  }
+  .prose-pp ol {
+    padding-left: 1.3rem;
+    list-style: decimal;
+  }
+  .prose-pp ol > li {
+    margin-top: 0.5rem;
+    padding-left: 0.3rem;
+  }
+  .prose-pp blockquote {
+    border-left: 3px solid var(--color-teal);
+    padding-left: 1rem;
+    font-style: italic;
+    color: var(--color-ink);
+  }
+  .prose-pp code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background: var(--color-paper-2);
+    padding: 0.1em 0.35em;
+    border-radius: 5px;
+  }
+}
+
+/* Staggered entrance for the hero / sections (respects reduced-motion above) */
+@keyframes pp-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.pp-rise {
+  animation: pp-rise 0.7s var(--ease-out-soft) both;
+}
+
+/* Slow drift for hero particle motif */
+@keyframes pp-drift {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(var(--dx, 6px), var(--dy, -8px));
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
