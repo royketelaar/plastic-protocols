@@ -12,7 +12,7 @@ const root = ref<HTMLElement | null>(null)
 const items = computed(() =>
   locales.value.map((l) => {
     const meta = LOCALES.find((m) => m.code === l.code)
-    return { code: l.code, native: meta?.native ?? l.name ?? l.code, dir: meta?.dir ?? 'ltr' }
+    return { code: l.code, native: meta?.native ?? l.name ?? l.code, flag: meta?.flag ?? '🏳️', dir: meta?.dir ?? 'ltr' }
   }),
 )
 const current = computed(() => items.value.find((l) => l.code === locale.value) ?? items.value[0]!)
@@ -42,7 +42,7 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKey))
       :aria-label="`${t('lang.switch')}: ${current.native}`"
       @click="toggle"
     >
-      <Icon name="lucide:languages" :size="14" aria-hidden="true" />
+      <span class="text-sm leading-none" aria-hidden="true">{{ current.flag }}</span>
       <span class="uppercase">{{ current.code }}</span>
       <Icon name="lucide:chevron-down" :size="13" class="transition-transform" :class="open && 'rotate-180'" aria-hidden="true" />
     </button>
@@ -87,7 +87,10 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKey))
               "
               @click="close"
             >
-              <span class="truncate">{{ l.native }}</span>
+              <span class="flex min-w-0 items-center gap-2">
+                <span class="text-base leading-none" aria-hidden="true">{{ l.flag }}</span>
+                <span class="truncate">{{ l.native }}</span>
+              </span>
               <Icon
                 v-if="l.code === current.code"
                 name="lucide:check"

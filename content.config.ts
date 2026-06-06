@@ -1,7 +1,7 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
 
 /** All supported locale codes. Keep in sync with nuxt.config i18n + app/utils/locales. */
-const CODES = ['en', 'nl', 'zh', 'hi', 'es', 'fr', 'ar']
+const CODES = ['en', 'nl', 'zh', 'hi', 'es', 'fr', 'ar', 'th']
 
 const sourceSchema = z.object({
   title: z.string(),

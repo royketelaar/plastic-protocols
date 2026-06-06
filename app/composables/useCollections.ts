@@ -1,6 +1,6 @@
 import { LOCALE_CODES } from '~/utils/locales'
 
-type Code = 'en' | 'nl' | 'zh' | 'hi' | 'es' | 'fr' | 'ar'
+type Code = 'en' | 'nl' | 'zh' | 'hi' | 'es' | 'fr' | 'ar' | 'th'
 
 /**
  * Locale-aware Nuxt Content collection names.
