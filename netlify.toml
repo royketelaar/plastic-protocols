@@ -1,6 +1,8 @@
 [build]
   command = "bun run generate"
-  publish = ".output/public"
+  # On Netlify, Nuxt/Nitro auto-applies the Netlify preset and writes the static
+  # site to dist/. Locally dist is a symlink to .output/public, so this works both ways.
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "22"
