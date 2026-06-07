@@ -68,8 +68,6 @@
     "backToProtocols": "Tous les protocoles",
     "backToMyths": "Tous les mythes",
     "startCheck": "Faire l'auto-évaluation en 2 minutes",
-    "addToPlan": "Ajouter à mon plan",
-    "inPlan": "Dans votre plan",
     "done": "Terminé",
     "loading": "Chargement…"
   },
@@ -129,18 +127,14 @@
   },
   "protocolsPage": {
     "title": "Les protocoles",
-    "lead": "Évalués par les preuves, classés par solidité scientifique et par leur capacité réelle à réduire votre exposition. Ajoutez ceux que vous allez appliquer à votre plan.",
+    "lead": "Évalués par les preuves, classés par solidité scientifique et par leur capacité réelle à réduire votre exposition.",
     "filterGrade": "Preuves",
     "filterType": "Focus",
     "all": "Tous",
     "results": "{count} protocoles",
     "none": "Aucun protocole ne correspond à ces filtres.",
     "reset": "Réinitialiser les filtres",
-    "sortedNote": "Triés par solidité des preuves",
-    "planTitle": "Votre plan d'action",
-    "planEmpty": "Appuyez sur + sur n'importe quel protocole pour créer un plan d'action personnel. Il est enregistré uniquement sur cet appareil.",
-    "planCount": "{count} enregistrés",
-    "clear": "Effacer"
+    "sortedNote": "Triés par solidité des preuves"
   },
   "mythsPage": {
     "title": "Mythes et affirmations exagérées",
@@ -190,9 +184,8 @@
     "seeResults": "Voir mon plan",
     "restart": "Recommencer",
     "resultTitle": "Votre plan priorisé",
-    "resultLead": "D'après vos réponses, ces protocoles réduiront le plus votre exposition. Ajoutez-les à votre plan et commencez par le premier.",
+    "resultLead": "D'après vos réponses, ces protocoles réduiront le plus votre exposition. Commencez par le premier.",
     "topMatch": "Priorité absolue",
-    "addAll": "Tout ajouter à mon plan",
     "allGood": "Vous faites déjà les gestes essentiels à fort impact. Parcourez tous les protocoles pour aller plus loin.",
     "browseAll": "Parcourir tous les protocoles",
     "q": {

@@ -68,8 +68,6 @@
     "backToProtocols": "All protocols",
     "backToMyths": "All myths",
     "startCheck": "Take the 2-minute self-check",
-    "addToPlan": "Add to my plan",
-    "inPlan": "In your plan",
     "done": "Done",
     "loading": "Loading…"
   },
@@ -129,18 +127,14 @@
   },
   "protocolsPage": {
     "title": "The protocols",
-    "lead": "Evidence-graded, ranked by how strong the science is and how much they actually lower your exposure. Add the ones you'll do to your plan.",
+    "lead": "Evidence-graded, ranked by how strong the science is and how much they actually lower your exposure.",
     "filterGrade": "Evidence",
     "filterType": "Focus",
     "all": "All",
     "results": "{count} protocols",
     "none": "No protocols match these filters.",
     "reset": "Reset filters",
-    "sortedNote": "Sorted by strength of evidence",
-    "planTitle": "Your action plan",
-    "planEmpty": "Tap + on any protocol to build a personal action plan. It's saved on this device only.",
-    "planCount": "{count} saved",
-    "clear": "Clear"
+    "sortedNote": "Sorted by strength of evidence"
   },
   "mythsPage": {
     "title": "Myths & overstated claims",
@@ -190,9 +184,8 @@
     "seeResults": "See my plan",
     "restart": "Start over",
     "resultTitle": "Your prioritised plan",
-    "resultLead": "Based on your answers, these protocols will lower your exposure the most. Add them to your plan and start with the top one.",
+    "resultLead": "Based on your answers, these protocols will lower your exposure the most. Start with the one at the top.",
     "topMatch": "Top priority",
-    "addAll": "Add all to my plan",
     "allGood": "You're already doing the high-impact basics. Browse all protocols to go further.",
     "browseAll": "Browse all protocols",
     "q": {

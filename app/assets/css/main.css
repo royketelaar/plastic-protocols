@@ -128,7 +128,7 @@
   /* Skip link */
   .skip-link {
     position: absolute;
-    left: 1rem;
+    inset-inline-start: 1rem;
     top: -3rem;
     z-index: 100;
     background: var(--color-ink);
@@ -183,17 +183,17 @@
   }
   .prose-pp ul {
     list-style: none;
-    padding-left: 0;
+    padding-inline-start: 0;
   }
   .prose-pp ul > li {
     position: relative;
-    padding-left: 1.6rem;
+    padding-inline-start: 1.6rem;
     margin-top: 0.6rem;
   }
   .prose-pp ul > li::before {
     content: '';
     position: absolute;
-    left: 0.2rem;
+    inset-inline-start: 0.2rem;
     top: 0.72em;
     width: 0.4rem;
     height: 0.4rem;
@@ -201,16 +201,16 @@
     background: var(--color-teal);
   }
   .prose-pp ol {
-    padding-left: 1.3rem;
+    padding-inline-start: 1.3rem;
     list-style: decimal;
   }
   .prose-pp ol > li {
     margin-top: 0.5rem;
-    padding-left: 0.3rem;
+    padding-inline-start: 0.3rem;
   }
   .prose-pp blockquote {
-    border-left: 3px solid var(--color-teal);
-    padding-left: 1rem;
+    border-inline-start: 3px solid var(--color-teal);
+    padding-inline-start: 1rem;
     font-style: italic;
     color: var(--color-ink);
   }

@@ -24,6 +24,10 @@ const etype = ref<EvidenceType | null>(null)
 
 const types: EvidenceType[] = ['particle', 'chemical', 'both']
 
+// Only offer filter chips for grades/types that actually have protocols.
+const availableGrades = computed(() => GRADE_ORDER.filter((g) => all.value.some((p) => p.evidenceGrade === g)))
+const availableTypes = computed(() => types.filter((ty) => all.value.some((p) => p.evidenceType === ty)))
+
 const filtered = computed(() =>
   all.value.filter(
     (p) =>
@@ -56,7 +60,7 @@ const reset = () => {
             {{ t('protocolsPage.all') }}
           </button>
           <button
-            v-for="g in GRADE_ORDER"
+            v-for="g in availableGrades"
             :key="g"
             type="button"
             class="rounded-full border px-3 py-1.5 text-xs font-medium transition-colors"
@@ -70,7 +74,7 @@ const reset = () => {
         <div class="flex flex-wrap items-center gap-2">
           <span class="mr-1 font-mono text-xs uppercase tracking-wide text-ink-faint">{{ t('protocolsPage.filterType') }}</span>
           <button
-            v-for="ty in types"
+            v-for="ty in availableTypes"
             :key="ty"
             type="button"
             class="rounded-full border px-3 py-1.5 text-xs font-medium transition-colors"

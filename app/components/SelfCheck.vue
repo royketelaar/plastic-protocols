@@ -5,7 +5,6 @@ import { slugOf, type ProtocolItem } from '~/types/content'
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const { protocols } = useCollections()
-const { has, toggle } = usePlan()
 
 // Quiz model: each option contributes weights to protocol slugs.
 interface Option { id: string; weights: Record<string, number> }
@@ -90,6 +89,13 @@ const restart = () => {
   answers.value = {}
 }
 
+// Move focus to the heading of the new step/stage so AT + keyboard users
+// are told the content changed (WCAG 2.4.3 / 4.1.3).
+const stageHeading = ref<HTMLElement | null>(null)
+watch([stage, step], () => {
+  nextTick(() => stageHeading.value?.focus())
+})
+
 const recommendations = computed(() => {
   const scores: Record<string, number> = {}
   for (const q of QUESTIONS) {
@@ -104,10 +110,6 @@ const recommendations = computed(() => {
     .filter((r) => r.protocol)
     .sort((a, b) => b.score - a.score || byEvidenceThenOrder(a.protocol!, b.protocol!))
 })
-
-const addAll = () => {
-  for (const r of recommendations.value) if (!has(r.slug)) toggle(r.slug)
-}
 </script>
 
 <template>
@@ -117,7 +119,7 @@ const addAll = () => {
       <span class="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-soft text-teal-deep">
         <Icon name="lucide:clipboard-list" :size="32" aria-hidden="true" />
       </span>
-      <h1 class="mt-6 font-display text-3xl font-semibold sm:text-4xl">{{ t('checkPage.title') }}</h1>
+      <h1 ref="stageHeading" tabindex="-1" class="mt-6 font-display text-3xl font-semibold focus:outline-none sm:text-4xl">{{ t('checkPage.title') }}</h1>
       <p class="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-ink-soft">{{ t('checkPage.lead') }}</p>
       <button
         type="button"
@@ -138,6 +140,7 @@ const addAll = () => {
         <div
           class="h-1.5 w-32 overflow-hidden rounded-full bg-paper-3"
           role="progressbar"
+          :aria-label="t('checkPage.question', { n: step + 1, total: QUESTIONS.length })"
           :aria-valuenow="Math.round(progress)"
           aria-valuemin="0"
           aria-valuemax="100"
@@ -146,7 +149,7 @@ const addAll = () => {
         </div>
       </div>
 
-      <h2 class="mt-6 font-display text-2xl font-semibold leading-snug sm:text-3xl">
+      <h2 ref="stageHeading" tabindex="-1" class="mt-6 font-display text-2xl font-semibold leading-snug focus:outline-none sm:text-3xl">
         {{ t(`checkPage.q.${current.id}.q`) }}
       </h2>
 
@@ -198,8 +201,7 @@ const addAll = () => {
 
     <!-- RESULT -->
     <div v-else-if="stage === 'result'">
-      <p class="font-mono text-xs uppercase tracking-wide text-teal-deep">{{ t('checkPage.resultTitle') }}</p>
-      <h1 class="mt-2 font-display text-3xl font-semibold sm:text-4xl">{{ t('checkPage.resultTitle') }}</h1>
+      <h1 ref="stageHeading" tabindex="-1" class="font-display text-3xl font-semibold focus:outline-none sm:text-4xl">{{ t('checkPage.resultTitle') }}</h1>
 
       <template v-if="recommendations.length">
         <p class="mt-4 text-lg leading-relaxed text-ink-soft">{{ t('checkPage.resultLead') }}</p>
@@ -208,7 +210,7 @@ const addAll = () => {
           <li
             v-for="(r, i) in recommendations"
             :key="r.slug"
-            class="relative flex items-start gap-4 rounded-2xl border border-line bg-paper p-5"
+            class="group relative flex items-start gap-4 rounded-2xl border border-line bg-paper p-5 transition-colors hover:border-line-strong"
             :class="i === 0 && 'ring-1 ring-teal/30'"
           >
             <span class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-paper-2 font-mono text-sm font-semibold text-teal-deep tnum">
@@ -228,19 +230,17 @@ const addAll = () => {
                 <EvidenceBadge :grade="r.protocol!.evidenceGrade" size="sm" />
               </div>
             </div>
-            <PlanButton :slug="r.slug" />
+            <Icon
+              name="lucide:arrow-right"
+              :size="18"
+              class="mt-2 shrink-0 text-ink-faint transition-transform group-hover:translate-x-0.5"
+              aria-hidden="true"
+            />
           </li>
         </ol>
 
         <div class="mt-8 flex flex-wrap gap-3">
-          <button
-            type="button"
-            class="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-paper transition-colors hover:bg-teal-deep"
-            @click="addAll"
-          >
-            <Icon name="lucide:list-plus" :size="17" aria-hidden="true" />
-            {{ t('checkPage.addAll') }}
-          </button>
+          <ButtonLink :to="localePath('/protocols')" icon="lucide:arrow-right">{{ t('checkPage.browseAll') }}</ButtonLink>
           <button
             type="button"
             class="inline-flex items-center gap-2 rounded-full border border-line px-5 py-3 text-sm font-medium text-ink-soft transition-colors hover:text-ink"

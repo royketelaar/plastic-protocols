@@ -68,8 +68,6 @@
     "backToProtocols": "Alle protocollen",
     "backToMyths": "Alle mythes",
     "startCheck": "Doe de zelftest van 2 minuten",
-    "addToPlan": "Aan mijn plan toevoegen",
-    "inPlan": "In je plan",
     "done": "Klaar",
     "loading": "Laden…"
   },
@@ -129,18 +127,14 @@
   },
   "protocolsPage": {
     "title": "De protocollen",
-    "lead": "Op bewijs gegradeerd, gerangschikt op hoe sterk de wetenschap is en hoeveel ze je blootstelling echt verlagen. Voeg de protocollen die je gaat doen toe aan je plan.",
+    "lead": "Op bewijs gegradeerd, gerangschikt op hoe sterk de wetenschap is en hoeveel ze je blootstelling echt verlagen.",
     "filterGrade": "Bewijs",
     "filterType": "Focus",
     "all": "Alle",
     "results": "{count} protocollen",
     "none": "Geen protocollen passen bij deze filters.",
     "reset": "Filters wissen",
-    "sortedNote": "Gesorteerd op bewijskracht",
-    "planTitle": "Jouw actieplan",
-    "planEmpty": "Tik op + bij een protocol om een persoonlijk actieplan te bouwen. Het wordt alleen op dit apparaat bewaard.",
-    "planCount": "{count} opgeslagen",
-    "clear": "Wissen"
+    "sortedNote": "Gesorteerd op bewijskracht"
   },
   "mythsPage": {
     "title": "Mythes & overdreven claims",
@@ -190,9 +184,8 @@
     "seeResults": "Toon mijn plan",
     "restart": "Opnieuw beginnen",
     "resultTitle": "Jouw geprioriteerde plan",
-    "resultLead": "Op basis van je antwoorden verlagen deze protocollen je blootstelling het meest. Voeg ze toe aan je plan en begin met de bovenste.",
+    "resultLead": "Op basis van je antwoorden verlagen deze protocollen je blootstelling het meest. Begin met de bovenste.",
     "topMatch": "Hoogste prioriteit",
-    "addAll": "Alles aan mijn plan toevoegen",
     "allGood": "Je doet de basis met hoge impact al. Bekijk alle protocollen om verder te gaan.",
     "browseAll": "Bekijk alle protocollen",
     "q": {

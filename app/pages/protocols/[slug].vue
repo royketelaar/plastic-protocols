@@ -2,11 +2,11 @@
 import { GRADE_META, GRADE_CLASSES } from '~/utils/evidence'
 import { slugOf, type ProtocolItem } from '~/types/content'
 
-const { t, locale } = useI18n()
+const { t, locale, locales } = useI18n()
 const localePath = useLocalePath()
+const setI18nParams = useSetI18nParams()
 const route = useRoute()
 const { protocols } = useCollections()
-const { has, toggle } = usePlan()
 
 const slug = computed(() => String(route.params.slug))
 
@@ -22,6 +22,10 @@ const { data: doc } = await useAsyncData(
 if (!doc.value) {
   throw createError({ statusCode: 404, statusMessage: 'Protocol not found', fatal: true })
 }
+
+// Protocol slugs are identical across locales, so register the same slug for
+// every locale → correct hreflang alternates + language switching on this page.
+setI18nParams(Object.fromEntries(locales.value.map((l) => [l.code, { slug: slug.value }])))
 
 const p = computed(() => doc.value as unknown as ProtocolItem)
 const gradeMeta = computed(() => GRADE_META[p.value.evidenceGrade])
@@ -72,23 +76,6 @@ useSeoMeta({
         </div>
 
         <p class="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">{{ p.summary }}</p>
-
-        <div class="mt-6">
-          <button
-            type="button"
-            :aria-pressed="has(slug)"
-            class="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-colors"
-            :class="
-              has(slug)
-                ? 'bg-teal-soft text-teal-deep ring-1 ring-teal/30'
-                : 'bg-ink text-paper hover:bg-teal-deep'
-            "
-            @click="toggle(slug)"
-          >
-            <Icon :name="has(slug) ? 'lucide:check' : 'lucide:plus'" :size="18" aria-hidden="true" />
-            {{ has(slug) ? t('common.inPlan') : t('common.addToPlan') }}
-          </button>
-        </div>
       </div>
     </header>
 

@@ -11,7 +11,14 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/fonts',
     '@nuxt/icon',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
   ],
+
+  site: {
+    url: 'https://plasticprotocols.com',
+    name: 'Plastic Protocols',
+  },
 
   css: ['~/assets/css/main.css'],
 
@@ -24,7 +31,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'theme-color', content: '#0e7c86' },
+        { name: 'theme-color', content: '#0c6f78' },
       ],
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     },
@@ -72,7 +79,9 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/nl'],
+      // Seed every locale root so all language trees prerender even if link
+      // discovery changes; crawlLinks then follows into each localized page.
+      routes: ['/', '/nl', '/ar', '/zh', '/fr', '/hi', '/es', '/th'],
     },
   },
 })

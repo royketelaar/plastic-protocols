@@ -68,8 +68,6 @@
     "backToProtocols": "Todos los protocolos",
     "backToMyths": "Todos los mitos",
     "startCheck": "Hacer la autoevaluación de 2 minutos",
-    "addToPlan": "Añadir a mi plan",
-    "inPlan": "En tu plan",
     "done": "Listo",
     "loading": "Cargando…"
   },
@@ -129,18 +127,14 @@
   },
   "protocolsPage": {
     "title": "Los protocolos",
-    "lead": "Clasificados por evidencia, ordenados por la solidez de la ciencia y cuánto reducen realmente tu exposición. Añade los que vayas a seguir a tu plan.",
+    "lead": "Clasificados por evidencia, ordenados por la solidez de la ciencia y cuánto reducen realmente tu exposición.",
     "filterGrade": "Evidencia",
     "filterType": "Enfoque",
     "all": "Todos",
     "results": "{count} protocolos",
     "none": "Ningún protocolo coincide con estos filtros.",
     "reset": "Restablecer filtros",
-    "sortedNote": "Ordenados por solidez de la evidencia",
-    "planTitle": "Tu plan de acción",
-    "planEmpty": "Toca + en cualquier protocolo para crear un plan de acción personal. Se guarda solo en este dispositivo.",
-    "planCount": "{count} guardados",
-    "clear": "Borrar"
+    "sortedNote": "Ordenados por solidez de la evidencia"
   },
   "mythsPage": {
     "title": "Mitos y afirmaciones exageradas",
@@ -190,9 +184,8 @@
     "seeResults": "Ver mi plan",
     "restart": "Volver a empezar",
     "resultTitle": "Tu plan priorizado",
-    "resultLead": "Según tus respuestas, estos protocolos reducirán más tu exposición. Añádelos a tu plan y empieza por el primero.",
+    "resultLead": "Según tus respuestas, estos protocolos reducirán más tu exposición. Empieza por el primero.",
     "topMatch": "Prioridad máxima",
-    "addAll": "Añadir todos a mi plan",
     "allGood": "Ya estás aplicando los fundamentos de mayor impacto. Explora todos los protocolos para ir más lejos.",
     "browseAll": "Explorar todos los protocolos",
     "q": {
