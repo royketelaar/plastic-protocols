@@ -233,5 +233,12 @@
         "yes": "Ja, ik lees etiketten"
       }
     }
+  },
+  "consent": {
+    "label": "Cookietoestemming",
+    "message": "We gebruiken Google Analytics-cookies om te zien hoe de site wordt gebruikt. Alles werkt hoe dan ook, en je keuze wordt onthouden.",
+    "accept": "Accepteren",
+    "decline": "Weigeren",
+    "settings": "Cookie-instellingen"
   }
 }

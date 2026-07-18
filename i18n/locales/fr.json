@@ -233,5 +233,12 @@
         "yes": "Oui, je vérifie les étiquettes"
       }
     }
+  },
+  "consent": {
+    "label": "Consentement aux cookies",
+    "message": "Nous utilisons les cookies Google Analytics pour comprendre comment le site est utilisé. Tout fonctionne dans les deux cas, et votre choix est mémorisé.",
+    "accept": "Accepter",
+    "decline": "Refuser",
+    "settings": "Paramètres des cookies"
   }
 }

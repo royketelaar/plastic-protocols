@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
+const { reopen } = useConsent()
 const year = 2026
 const xUrl = 'https://x.com/PlasticProtocol'
 
@@ -56,7 +57,16 @@ const cols = computed(() => [
 
       <div class="flex flex-col gap-3 text-xs text-ink-faint sm:flex-row sm:items-center sm:justify-between">
         <p>© {{ year }} {{ t('footer.rights') }}</p>
-        <p class="font-mono">plasticprotocols.com</p>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+          <button
+            type="button"
+            class="text-start transition-colors hover:text-teal"
+            @click="reopen"
+          >
+            {{ t('consent.settings') }}
+          </button>
+          <p class="font-mono">plasticprotocols.com</p>
+        </div>
       </div>
     </div>
   </footer>

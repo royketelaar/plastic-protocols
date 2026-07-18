@@ -233,5 +233,12 @@
         "yes": "Yes, I check labels"
       }
     }
+  },
+  "consent": {
+    "label": "Cookie consent",
+    "message": "We use Google Analytics cookies to understand how the site is used. Everything works either way, and your choice is remembered.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "settings": "Cookie settings"
   }
 }

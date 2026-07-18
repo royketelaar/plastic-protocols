@@ -20,6 +20,14 @@ export default defineNuxtConfig({
     name: 'Plastic Protocols',
   },
 
+  runtimeConfig: {
+    public: {
+      // GA4 measurement ID (public by nature — it ends up in the page source).
+      // Override with NUXT_PUBLIC_GA_ID; empty disables GA and the cookie banner.
+      gaId: 'G-HN7LX8VESL',
+    },
+  },
+
   css: ['~/assets/css/main.css'],
 
   vite: {
