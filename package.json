@@ -12,23 +12,23 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
-    "@nuxt/content": "^3.14.0",
+    "@nuxt/content": "^3.16.1",
     "@nuxt/fonts": "^0.14.0",
-    "@nuxt/icon": "^2.1.0",
-    "@nuxt/image": "^2.0.0",
-    "@nuxtjs/i18n": "^10.4.0",
-    "@nuxtjs/robots": "^6.0.9",
-    "@nuxtjs/sitemap": "^8.0.15",
-    "better-sqlite3": "^11.8.1",
-    "nuxt": "^4.4.7",
+    "@nuxt/icon": "^2.5.1",
+    "@nuxt/image": "^2.1.0",
+    "@nuxtjs/i18n": "^10.6.0",
+    "@nuxtjs/robots": "^6.2.4",
+    "@nuxtjs/sitemap": "^8.6.1",
+    "better-sqlite3": "^11.10.0",
+    "nuxt": "^4.6.1",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.2.20",
-    "@playwright/test": "^1.49.1",
-    "@tailwindcss/vite": "^4.0.0",
-    "tailwindcss": "^4.0.0"
+    "@iconify-json/lucide": "^1.2.142",
+    "@playwright/test": "^1.64.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3"
   },
   "trustedDependencies": [
     "better-sqlite3"
