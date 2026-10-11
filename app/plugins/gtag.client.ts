@@ -9,9 +9,11 @@ export default defineNuxtPlugin(() => {
   if (stored === 'granted' || stored === 'denied') consent.value = stored
 
   const win = window as unknown as { dataLayer?: unknown[] } & Record<string, boolean>
-  const gtag = (...args: unknown[]) => {
+  // gtag.js only processes Arguments objects; a plain array (rest params) is silently ignored.
+  function gtag(..._args: unknown[]) {
     win.dataLayer = win.dataLayer ?? []
-    win.dataLayer.push(args)
+    // eslint-disable-next-line prefer-rest-params
+    win.dataLayer.push(arguments)
   }
 
   const disableKey = `ga-disable-${gaId}`
