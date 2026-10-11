@@ -42,10 +42,4 @@ export default defineNuxtPlugin(() => {
     },
     { immediate: true },
   )
-
-  useRouter().afterEach((to) => {
-    if (loaded && consent.value === 'granted') {
-      gtag('event', 'page_view', { page_path: to.fullPath })
-    }
-  })
 })
